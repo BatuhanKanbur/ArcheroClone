@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using Gamecore.AnimatorBehaviour.Enums;
+using Gamecore.Character.Structure;
+using UnityEngine;
 using UnityEngine.Animations;
 
 namespace Gameplay.Player.Interface
@@ -6,7 +9,8 @@ namespace Gameplay.Player.Interface
     public interface IPlayerAnimator : IPlayerComponent
     {
         public Animator Animator { get;}
-        public AimConstraint[] AimConstraints { get; }
+        public void Subscribe(AnimationType animationType,Action<AnimatorEvent> callback);
+        public void Unsubscribe(AnimationType animationType,Action<AnimatorEvent> callback);
         public void SetAimConstraintsActive(bool active);
         public void SetMovementSpeed(float speed);
         public void SetMovementInput(float input);

@@ -1,5 +1,6 @@
 ﻿using System;
 using Gameplay.Player.Interface;
+using Gameplay.Player.Structure;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,12 +9,14 @@ namespace Gameplay.Player.Behaviour
     public class Player : MonoBehaviour,IPlayer
     {
         public bool IsInitialized { get; private set; }
+        [SerializeField] private PlayerStats playerStats;
         public CharacterController CharacterController { get; private set; }
         public Animator Animator { get; private set; }
         public IPlayerAnimator Animation { get; private set; }
         public IPlayerCombat Combat { get; private set; }
         public IPlayerMovement Movement { get; private set; }
         public IPlayerStatus Status { get; private set; }
+        public IPlayerSkillController SkillController { get; private set; }
 
         private void Awake()
         {
@@ -28,7 +31,8 @@ namespace Gameplay.Player.Behaviour
             Animation = new PlayerAnimator(this);
             Combat = new PlayerCombat(this);
             if (Camera.main) Movement = new PlayerMovement(this, Camera.main.transform);
-            Status = new PlayerStatus(this);
+            Status = new PlayerStatus(this,playerStats);
+            SkillController = new PlayerSkillController(this);
             IsInitialized = true;
         }
         public void OnEnable()
@@ -37,20 +41,17 @@ namespace Gameplay.Player.Behaviour
             Movement?.Reset();
             Combat?.Reset();
             Animation?.Reset();
+            SkillController?.Reset();
         }
         private void Update()
         {
             Movement?.Update();
             Combat?.Update();
             Animation?.Update();
+            SkillController?.Update();
         }
-        public void OnDestroy()
-        {
-            Status?.Dispose();
-            Movement?.Dispose();
-            Combat?.Dispose();
-            Animation?.Dispose();
-        }
+
+        public void OnDestroy() => Dispose();
         public void OnMove(InputValue input)
         {
             Movement.SetMovementInput(input.Get<Vector2>());
@@ -61,6 +62,11 @@ namespace Gameplay.Player.Behaviour
         }
         public void Dispose()
         {
+            Status?.Dispose();
+            Movement?.Dispose();
+            Combat?.Dispose();
+            Animation?.Dispose();
+            SkillController?.Dispose();
         }
     }
 }

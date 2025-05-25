@@ -1,9 +1,10 @@
 ﻿using Gameplay.Player.Structure;
+using Gameplay.Skill.Interface;
 
 namespace Gameplay.Player.Interface
 {
-    public interface IPlayerStatus : IPlayerComponent
+    public interface IPlayerStatus : IPlayerComponent , ISkillable
     {
-        public PlayerStats Stats { get; }
+        public IPlayerStats Stats { get; }
     }
 }
