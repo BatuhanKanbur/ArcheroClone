@@ -8,8 +8,8 @@ using UnityEngine;
 
 namespace Gameplay.Enemy.Behaviour
 {
-    using Gameplay.Player.Behaviour;
-    public class Enemy : Player, IDamageable, IMob
+    using Gameplay.Character.Behaviour;
+    public class Enemy : Character, IDamageable, IMob
     {
         private Action<IMob> _onMobDispose;
         public void Initialize(StatsData statsData, Action<IMob> onDispose)

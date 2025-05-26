@@ -1,27 +1,26 @@
-﻿using Gamecore.AnimatorBehaviour.Behaviour;
+﻿using System;
+using Gamecore.AnimatorBehaviour.Behaviour;
 using Gamecore.AnimatorBehaviour.Enums;
 using Gamecore.Character.Structure;
-using Gameplay.Player.Interface;
-using System;
+using Gameplay.Character.Interface;
 using UnityEngine;
 using UnityEngine.Animations;
-using UnityEngine.Rendering;
-using static Gameplay.Player.Constants.AnimatorConstants;
+using static Gameplay.Character.Constants.AnimatorConstants;
 
-namespace Gameplay.Player.Behaviour
+namespace Gameplay.Character.Behaviour
 {
-    public class PlayerAnimator : IPlayerAnimator
+    public class CharacterAnimator : ICharacterAnimator
     {
-        public IPlayer Player { get; }
+        public ICharacter Character { get; }
         public Animator Animator { get; }
         public Transform LeftHand { get; }
         public Transform RightHand { get; }
         private readonly AimConstraint[] _aimConstraints;
         private readonly StateMachineBehaviour[] _stateMachineBehaviours;
-        public PlayerAnimator(IPlayer player)
+        public CharacterAnimator(ICharacter character)
         {
-            Player = player;
-            Animator = Player.Animator;
+            Character = character;
+            Animator = Character.Animator;
             LeftHand = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
             RightHand = Animator.GetBoneTransform(HumanBodyBones.RightHand);
             _aimConstraints = Animator.GetComponentsInChildren<AimConstraint>();
@@ -51,7 +50,7 @@ namespace Gameplay.Player.Behaviour
 
         public void SetAttack()
         {
-            Animator.SetFloat(AttackSpeedKey, Player.Status.Stats.AttackSpeed);
+            Animator.SetFloat(AttackSpeedKey, Character.Status.Stats.AttackSpeed);
             Animator.SetTrigger(AttackKey);
         }
 

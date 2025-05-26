@@ -5,6 +5,7 @@ using Gamecore.AssetManager.Behaviour;
 using Gamecore.AssetManager.Constants;
 using Gamecore.MobManager.Interface;
 using Gamecore.MobManager.Structure;
+using Gameplay.Player.Interface;
 using Gameplay.Skill.Structure;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -16,6 +17,7 @@ namespace Gamecore.MobManager.Behaviours
     {
         [SerializeField] private AssetReference playerPrefab;
         [SerializeField] private MobSet mobArea;
+        private IPlayer _player;
         private readonly List<IMob> _mobs = new List<IMob>();
         private readonly CancellationTokenSource _cts = new CancellationTokenSource();
         private MobSpawner _mobSpawner;
@@ -27,14 +29,15 @@ namespace Gamecore.MobManager.Behaviours
         private async UniTaskVoid StartSpawning()
         {
             await SpawnPlayer();
-            _ = SpawnMob();
+            SpawnMob().Forget();
         }
 
         private async UniTask SpawnPlayer()
         {
             var createdPlayer = await GetObject(playerPrefab,Vector3.zero,Quaternion.identity);
-            // createdPlayer.GetComponent<>()
             createdPlayer.transform.SetParent(null);
+            _player = createdPlayer.GetComponent<IPlayer>();
+            _player.Initialize();
         }
 
         public async UniTask SpawnMob()
@@ -48,7 +51,7 @@ namespace Gamecore.MobManager.Behaviours
                 foreach (var spawnedMob in spawnedMobs)
                 {
                     // spawnedMob.Item1.Init(MobType.Enemy,spawnedMob.Item2,this);
-                    // _mobs.Add(spawnedMob.Item1);
+                    _mobs.Add(spawnedMob.Item1);
                 }
                 Debug.Log(spawnedMobs.Length + " mobs spawned.");
             }

@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Mob_01
   m_EditorClassIdentifier: 
   spawnChance: 100
-  mobPrefabs: []
-  mobStats: []
+  mobPrefabs:
+  - m_AssetGUID: 56a6ceaa76781914aa06acaf6b17c3a6
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_EditorAssetChanged: 0
+  mobStats:
+  - {fileID: 11400000, guid: 5d3032ca49ec3f742b16c343a049cca6, type: 2}

@@ -10,15 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
-  m_Name: Player
+  m_Name: Characters
   m_EditorClassIdentifier: 
-  m_GroupName: Player
+  m_GroupName: Characters
   m_Data:
     m_SerializedData: []
   m_GUID: b2d3ddd7789cdc345af6011dfa539ee2
   m_SerializeEntries:
   - m_GUID: a9890493c3a853443b7b13a27c6b7cfd
     m_Address: Player
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 56a6ceaa76781914aa06acaf6b17c3a6
+    m_Address: Enemy
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

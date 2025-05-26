@@ -1,27 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
+using Gameplay.Character.Interface;
+using Gameplay.Character.Structure;
 using Gameplay.Damageable.Interface;
-using Gameplay.Player.Interface;
-using Gameplay.Player.Structure;
-using Gameplay.Skill.Interface;
 using Gameplay.Skill.Structure;
-using UnityEngine;
 using static UnityEngine.Object;
 
-namespace Gameplay.Player.Behaviour
+namespace Gameplay.Character.Behaviour
 {
-    public class PlayerStatus : IPlayerStatus
+    public class CharacterStatus : ICharacterStatus
     {
         private float _health;
         public Action OnDeath { get; set; }
-        public IPlayer Player { get; }
+        public ICharacter Character { get; }
         public IHealthBar HealthBar { get; }
-        public IPlayerStats Stats => _playerStats;
-        private PlayerStats _playerStats;
-        public PlayerStatus(IPlayer player, PlayerStats stats,IHealthBar healthBar)
+        public ICharacterStats Stats => _characterStats;
+        private CharacterStats _characterStats;
+        public CharacterStatus(ICharacter character, CharacterStats stats,IHealthBar healthBar)
         {
-            Player = player;
-            _playerStats = Instantiate(stats);
+            Character = character;
+            _characterStats = Instantiate(stats);
             _health = stats.Health;
             HealthBar = healthBar;
             HealthBar?.Init(_health);
@@ -30,28 +27,28 @@ namespace Gameplay.Player.Behaviour
         public void OnHit(float damage)
         {
             _health -= damage;
-            Player.Animation.SetHit();
-            HealthBar?.SetHealth(_health, _playerStats.Health);
+            Character.Animation.SetHit();
+            HealthBar?.SetHealth(_health, _characterStats.Health);
             if(_health <= 0)
                 OnDeath?.Invoke();
         }
         public void ApplySkill(StatsData[] skillStats)
         {
             foreach (var modifier in skillStats) 
-                if(modifier is PlayerStats playerStats)
-                    _playerStats += playerStats;
+                if(modifier is CharacterStats playerStats)
+                    _characterStats += playerStats;
         }
         public void RemoveSkill(StatsData[] skillStats)
         {
             foreach (var modifier in skillStats) 
-                if(modifier is PlayerStats playerStats)
-                    _playerStats -= playerStats;
+                if(modifier is CharacterStats playerStats)
+                    _characterStats -= playerStats;
         }
         public void Update() { }
 
         public void Reset()
         {
-            _health = _playerStats.Health;
+            _health = _characterStats.Health;
             HealthBar?.Reset();
         }
         public void Dispose() { }

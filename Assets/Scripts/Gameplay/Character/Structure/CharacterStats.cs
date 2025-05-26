@@ -1,11 +1,11 @@
-﻿using Gameplay.Player.Interface;
+﻿using Gameplay.Character.Interface;
 using Gameplay.Skill.Structure;
 using UnityEngine;
 
-namespace Gameplay.Player.Structure
+namespace Gameplay.Character.Structure
 {
     [CreateAssetMenu(fileName = "PlayerStats", menuName = "ScriptableObjects/PlayerStats", order = 1)]
-    public class PlayerStats : StatsData ,IPlayerStats
+    public class CharacterStats : StatsData ,ICharacterStats
     {
         public float Health => maxHealth;
         public float MovementSpeed => movementSpeed * multiplier;
@@ -16,24 +16,24 @@ namespace Gameplay.Player.Structure
         [SerializeField] private float rotationSpeed;
         [SerializeField] private float attackSpeed;
 
-        public PlayerStats(float movementSpeed, float rotationSpeed, float attackSpeed) : base(1)
+        public CharacterStats(float movementSpeed, float rotationSpeed, float attackSpeed) : base(1)
         {
             this.movementSpeed = movementSpeed;
             this.rotationSpeed = rotationSpeed;
             this.attackSpeed = attackSpeed;
         }
 
-        public static PlayerStats operator +(PlayerStats a, PlayerStats b)
+        public static CharacterStats operator +(CharacterStats a, CharacterStats b)
         {
-            return new PlayerStats(
+            return new CharacterStats(
                 a.movementSpeed + b.movementSpeed,
                 a.rotationSpeed + b.rotationSpeed,
                 a.attackSpeed + b.attackSpeed
             );
         }
-        public static PlayerStats operator -(PlayerStats a, PlayerStats b)
+        public static CharacterStats operator -(CharacterStats a, CharacterStats b)
         {
-            return new PlayerStats(
+            return new CharacterStats(
                 a.movementSpeed - b.movementSpeed,
                 a.rotationSpeed - b.rotationSpeed,
                 a.attackSpeed - b.attackSpeed

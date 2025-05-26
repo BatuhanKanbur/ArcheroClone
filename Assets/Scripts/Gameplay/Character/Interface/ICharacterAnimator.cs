@@ -2,11 +2,10 @@
 using Gamecore.AnimatorBehaviour.Enums;
 using Gamecore.Character.Structure;
 using UnityEngine;
-using UnityEngine.Animations;
 
-namespace Gameplay.Player.Interface
+namespace Gameplay.Character.Interface
 {
-    public interface IPlayerAnimator : IPlayerComponent
+    public interface ICharacterAnimator : ICharacterComponent
     {
         public Animator Animator { get;}
         public Transform LeftHand { get; }

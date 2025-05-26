@@ -1,38 +1,37 @@
-﻿using System;
-using Gamecore.AnimatorBehaviour.Enums;
+﻿using Gamecore.AnimatorBehaviour.Enums;
 using Gamecore.Character.Structure;
-using Gameplay.Player.Interface;
+using Gameplay.Character.Interface;
 using Gameplay.Weapon.Interface;
 using UnityEngine;
 using EventType = Gamecore.AnimatorBehaviour.Enums.EventType;
 
-namespace Gameplay.Player.Behaviour
+namespace Gameplay.Character.Behaviour
 {
-    public class PlayerCombat : IPlayerCombat
+    public class CharacterCombat : ICharacterCombat
     {
-        public IPlayer Player { get; }
+        public ICharacter Character { get; }
         public IWeapon Weapon { get; private set; }
-        private bool HasMoving => Player.Movement.HasMoving;
+        private bool HasMoving => Character.Movement.HasMoving;
         private float _attackTime;
         private int _currentClipHash;
-        public PlayerCombat(IPlayer player,IWeapon weapon)
+        public CharacterCombat(ICharacter character,IWeapon weapon)
         {
-            Player = player;
+            Character = character;
             Weapon = weapon;
-            Weapon.SpawnWeapon(Player.Animation.LeftHand, Player.Animation.RightHand).Forget();
-            Player.Animation.Subscribe(AnimationType.Attack, OnAttackEvent);
+            Weapon.SpawnWeapon(Character.Animation.LeftHand, Character.Animation.RightHand).Forget();
+            Character.Animation.Subscribe(AnimationType.Attack, OnAttackEvent);
         }
         public void Update()
         {
             if(HasMoving) return;
-            _attackTime += Time.deltaTime * Player.Status.Stats.AttackSpeed;
+            _attackTime += Time.deltaTime * Character.Status.Stats.AttackSpeed;
             if (!(_attackTime >= 5)) return;
             _attackTime = 0;
-            Player.OnAttack();
+            Attack();
         }
         private void Attack()
         {
-            Player.Animation.SetAttack();
+            Character.Animation.SetAttack();
         }
         private void OnAttackEvent(AnimatorEvent animationEvent)
         {
@@ -40,11 +39,13 @@ namespace Gameplay.Player.Behaviour
             {
                 case EventType.Start:
                     _currentClipHash = animationEvent.ClipHash;
+                    Character.Animation.SetAimConstraintsActive(true);
                     break;
                 case EventType.Update when _currentClipHash == animationEvent.ClipHash:
                     break;
                 case EventType.End when _currentClipHash == animationEvent.ClipHash:
                     _currentClipHash = 0;
+                    Character.Animation.SetAimConstraintsActive(false);
                     break;
             }
         }
@@ -52,7 +53,7 @@ namespace Gameplay.Player.Behaviour
         public void Reset() { }
         public void Dispose()
         {
-            Player.Animation.Unsubscribe(AnimationType.Attack, OnAttackEvent);
+            Character.Animation.Unsubscribe(AnimationType.Attack, OnAttackEvent);
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Gameplay.Player.Constants
+namespace Gameplay.Character.Constants
 {
     public static class AnimatorConstants
     {

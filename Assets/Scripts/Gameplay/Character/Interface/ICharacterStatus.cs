@@ -1,14 +1,13 @@
 ﻿using System;
 using Gameplay.Damageable.Interface;
-using Gameplay.Player.Structure;
 using Gameplay.Skill.Interface;
 
-namespace Gameplay.Player.Interface
+namespace Gameplay.Character.Interface
 {
-    public interface IPlayerStatus : IPlayerComponent , ISkillable
+    public interface ICharacterStatus : ICharacterComponent , ISkillable
     {
         public Action OnDeath { get; set; }
-        public IPlayerStats Stats { get; }
+        public ICharacterStats Stats { get; }
         public IHealthBar HealthBar { get; }
         public void OnHit(float damage);
     }

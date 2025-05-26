@@ -1,71 +1,33 @@
-﻿using Gameplay.Damageable.Behaviour;
-using Gameplay.Damageable.Interface;
+﻿using System;
 using Gameplay.Player.Interface;
-using Gameplay.Player.Structure;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Gameplay.Player.Behaviour
 {
-    using Weapon.Structure;
-    public class Player : MonoBehaviour,IPlayer
+    using Gameplay.Character.Behaviour;
+    public class Player : Character, IPlayer
     {
-        public bool IsInitialized { get; private set; }
-        [SerializeField] private PlayerStats playerStats;
-        [SerializeField] private Weapon defaultWeapon;
-        [SerializeField] private HealthBarManager healthBar;
-        public CharacterController CharacterController { get; private set; }
-        public Animator Animator { get; private set; }
-        public IPlayerAnimator Animation { get; private set; }
-        public IPlayerCombat Combat { get; private set; }
-        public IPlayerMovement Movement { get; private set; }
-        public IPlayerStatus Status { get; private set; }
-        public IPlayerSkillController SkillController { get; private set; }
-        
-        public void Initialize()
+        private Camera _mainCamera;
+        public new void Initialize()
         {
-            if(IsInitialized) return;
-            CharacterController = GetComponent<CharacterController>();
-            Animator = GetComponent<Animator>();
-            Animation = new PlayerAnimator(this);
-            Combat = new PlayerCombat(this, defaultWeapon);
-            if (Camera.main) Movement = new PlayerMovement(this, Camera.main.transform);
-            Status = new PlayerStatus(this,playerStats,healthBar);
-            SkillController = new PlayerSkillController(this);
-            IsInitialized = true;
+            _mainCamera = Camera.main;
+            base.Initialize();
         }
-        public void OnEnable()
-        {
-            Status?.Reset();
-            Movement?.Reset();
-            Combat?.Reset();
-            Animation?.Reset();
-            SkillController?.Reset();
-        }
-        private void Update()
-        {
-            Movement?.Update();
-            Combat?.Update();
-            Animation?.Update();
-            SkillController?.Update();
-        }
-
-        public void OnDestroy() => Dispose();
         public void OnMove(InputValue input)
         {
-            Movement.SetMovementInput(input.Get<Vector2>());
+            Movement?.SetMovementInput(GetMovementDirection(input.Get<Vector2>()));
         }
-        public void OnAttack()
+        private Vector3 GetMovementDirection(Vector2 moveInput)
         {
-            Animation.SetAttack();
-        }
-        public void Dispose()
-        {
-            Status?.Dispose();
-            Movement?.Dispose();
-            Combat?.Dispose();
-            Animation?.Dispose();
-            SkillController?.Dispose();
+            var camForward = _mainCamera.transform.forward;
+            var camRight = _mainCamera.transform.right;
+            camForward.y = 0;
+            camRight.y = 0;
+            camForward.Normalize();
+            camRight.Normalize();
+            var desiredMove = camForward * moveInput.y + camRight * moveInput.x;
+            return desiredMove;
         }
     }
 }

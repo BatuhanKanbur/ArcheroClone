@@ -1,6 +1,6 @@
-﻿namespace Gameplay.Player.Interface
+﻿namespace Gameplay.Character.Interface
 {
-    public interface IPlayerStats
+    public interface ICharacterStats
     {
         public float Health { get; }
         public float MovementSpeed { get; }

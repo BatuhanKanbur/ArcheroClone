@@ -1,6 +1,4 @@
-﻿using Gameplay.Player.Interface;
-using Gameplay.Player.Structure;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Gameplay.Skill.Structure
 {

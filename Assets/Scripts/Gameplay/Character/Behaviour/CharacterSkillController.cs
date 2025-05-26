@@ -1,32 +1,32 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Gameplay.Player.Interface;
+using Gameplay.Character.Interface;
 using Gameplay.Skill.Enum;
 using Gameplay.Skill.Interface;
 using Gameplay.Skill.Structure;
 
-namespace Gameplay.Player.Behaviour
+namespace Gameplay.Character.Behaviour
 {
-    public class PlayerSkillController : IPlayerSkillController
+    public class CharacterSkillController : ICharacterSkillController
     {
-        public IPlayer Player { get; }
+        public ICharacter Character { get; }
         private readonly List<ISkill> _skills = new();
-        public PlayerSkillController(IPlayer player)
+        public CharacterSkillController(ICharacter character)
         {
-            Player = player;
+            Character = character;
         }
         public void UseSkill(SkillData skill)
         {
             if (_skills.Contains(skill)) return;
             _skills.Add(skill);
-            skill.UseSkill(Player.Status);
+            skill.UseSkill(Character.Status);
         }
 
         public void CancelSkill(SkillData skill)
         {
             if (_skills.Contains(skill))
                 _skills.Remove(skill);
-            skill.RemoveSkill(Player.Status);
+            skill.RemoveSkill(Character.Status);
         }
 
         public SkillState GetSkillState(SkillData skill) => _skills.Contains(skill) ? SkillState.Using : SkillState.Usable;
