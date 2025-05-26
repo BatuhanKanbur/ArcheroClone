@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Skills
+  m_EditorClassIdentifier: 
+  m_GroupName: Skills
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 6026e58b5a4789a48ba8fd363bce0026
+  m_SerializeEntries:
+  - m_GUID: 681fc8f1f8219bc4a91aaf4cd22a6b0a
+    m_Address: ArrowMultiplication
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Skill
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a078d159ea705854d85e06d142449d46
+    m_Address: AttackSpeedIncrease
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Skill
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1e8391978e7b44499db671e5a1db8e2
+    m_Address: BounceDamage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Skill
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 71863869ab9348e4280fb0dbabcda2ed
+    m_Address: BurnDamage
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Skill
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07477d54152a4ab4eab6c1baf8f3c9ad
+    m_Address: RageMode
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Skill
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 666cf6b8acf99d74996b412f8e1a061e, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: eb10ac99fcd19a44ba6d06d2154aa4d9, type: 2}
+    - {fileID: 11400000, guid: 2947bbb6e737fbe4da8ee7a3031fd874, type: 2}

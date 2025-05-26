@@ -7,9 +7,11 @@ namespace Gameplay.Player.Structure
     [CreateAssetMenu(fileName = "PlayerStats", menuName = "ScriptableObjects/PlayerStats", order = 1)]
     public class PlayerStats : StatsData ,IPlayerStats
     {
+        public float Health => maxHealth;
         public float MovementSpeed => movementSpeed * multiplier;
         public float RotationSpeed => rotationSpeed * multiplier;
         public float AttackSpeed => attackSpeed * multiplier;
+        [SerializeField] private float maxHealth = 100f;
         [SerializeField] private float movementSpeed;
         [SerializeField] private float rotationSpeed;
         [SerializeField] private float attackSpeed;

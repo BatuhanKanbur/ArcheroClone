@@ -14,12 +14,16 @@ namespace Gameplay.Player.Behaviour
     {
         public IPlayer Player { get; }
         public Animator Animator { get; }
+        public Transform LeftHand { get; }
+        public Transform RightHand { get; }
         private readonly AimConstraint[] _aimConstraints;
         private readonly StateMachineBehaviour[] _stateMachineBehaviours;
         public PlayerAnimator(IPlayer player)
         {
             Player = player;
             Animator = Player.Animator;
+            LeftHand = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
+            RightHand = Animator.GetBoneTransform(HumanBodyBones.RightHand);
             _aimConstraints = Animator.GetComponentsInChildren<AimConstraint>();
             _stateMachineBehaviours = Animator.GetBehaviours<StateMachineBehaviour>();
             SetAimConstraintsActive(false);

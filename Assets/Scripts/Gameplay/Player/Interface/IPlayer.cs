@@ -1,4 +1,5 @@
 ﻿using System;
+using Gameplay.Damageable.Interface;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

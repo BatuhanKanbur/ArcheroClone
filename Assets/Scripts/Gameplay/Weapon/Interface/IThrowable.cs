@@ -2,7 +2,7 @@
 {
     public interface IThrowable
     {
-        public IWeaponStats Weapon { get; set; }
+        public IWeaponStats WeaponStats { get; set; }
         public void Init(IWeaponStats weapon);
     }
 }

@@ -7,7 +7,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 using Object = UnityEngine.Object;
 
-namespace Gamecore.AssetManager
+namespace Gamecore.AssetManager.Behaviour
 {
     public static class AssetManager<T> where T : Object
     {

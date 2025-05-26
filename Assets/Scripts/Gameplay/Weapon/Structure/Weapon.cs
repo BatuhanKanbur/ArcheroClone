@@ -1,5 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using Gamecore.AssetManager;
+using Gamecore.AssetManager.Behaviour;
 using Gamecore.ObjectManager;
 using Gameplay.Skill.Interface;
 using Gameplay.Skill.Structure;

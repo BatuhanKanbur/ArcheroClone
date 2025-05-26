@@ -2,6 +2,7 @@
 using Gamecore.AnimatorBehaviour.Enums;
 using Gamecore.Character.Structure;
 using Gameplay.Player.Interface;
+using Gameplay.Weapon.Interface;
 using UnityEngine;
 using EventType = Gamecore.AnimatorBehaviour.Enums.EventType;
 
@@ -10,12 +11,15 @@ namespace Gameplay.Player.Behaviour
     public class PlayerCombat : IPlayerCombat
     {
         public IPlayer Player { get; }
+        public IWeapon Weapon { get; private set; }
         private bool HasMoving => Player.Movement.HasMoving;
         private float _attackTime;
         private int _currentClipHash;
-        public PlayerCombat(IPlayer player)
+        public PlayerCombat(IPlayer player,IWeapon weapon)
         {
             Player = player;
+            Weapon = weapon;
+            Weapon.SpawnWeapon(Player.Animation.LeftHand, Player.Animation.RightHand).Forget();
             Player.Animation.Subscribe(AnimationType.Attack, OnAttackEvent);
         }
         public void Update()

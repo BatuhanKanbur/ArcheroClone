@@ -9,6 +9,8 @@ namespace Gameplay.Player.Interface
     public interface IPlayerAnimator : IPlayerComponent
     {
         public Animator Animator { get;}
+        public Transform LeftHand { get; }
+        public Transform RightHand { get; }
         public void Subscribe(AnimationType animationType,Action<AnimatorEvent> callback);
         public void Unsubscribe(AnimationType animationType,Action<AnimatorEvent> callback);
         public void SetAimConstraintsActive(bool active);

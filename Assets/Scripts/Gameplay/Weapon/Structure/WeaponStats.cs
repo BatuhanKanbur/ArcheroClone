@@ -1,4 +1,5 @@
-﻿using Gameplay.Skill.Structure;
+﻿using System;
+using Gameplay.Skill.Structure;
 using Gameplay.Weapon.Interface;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace Gameplay.Weapon.Structure
         public int ArrowCount => arrowCount * multiplier;
         public float BurnDuration => burnDuration * multiplier;
         public int BounceCount => bounceCount * multiplier;
+        public Vector3[] BouncePoints { get; set; } = Array.Empty<Vector3>();
         
         [SerializeField] private float baseDamage;
         [SerializeField] private int arrowCount;
