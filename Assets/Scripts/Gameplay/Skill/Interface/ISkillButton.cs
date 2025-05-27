@@ -1,6 +1,5 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
-using Gameplay.Skill.Structure;
 
 namespace Gameplay.Skill.Interface
 {

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using Gamecore.AnimatorBehaviour.Enums;
-using Gamecore.Character.Structure;
+using Gamecore.AnimatorBehaviour.Structure;
 using Gameplay.Character.Interface;
 using Gameplay.Weapon.Interface;
 using UnityEngine;

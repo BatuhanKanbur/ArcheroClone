@@ -1,5 +1,4 @@
 ﻿using Gameplay.Character.Enum;
-using Gameplay.Skill.Structure;
 
 namespace Gameplay.Skill.Interface
 {

@@ -1,6 +1,4 @@
-﻿using System;
-using Cysharp.Threading.Tasks;
-using Gamecore.MobManager.Interface;
+﻿using Cysharp.Threading.Tasks;
 using Gameplay.Character.Interface;
 using Gameplay.Damageable.Interface;
 using Gameplay.Damageable.Structure;

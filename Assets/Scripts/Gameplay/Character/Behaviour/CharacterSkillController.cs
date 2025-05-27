@@ -3,7 +3,6 @@ using System.Linq;
 using Gameplay.Character.Enum;
 using Gameplay.Character.Interface;
 using Gameplay.Skill.Interface;
-using Gameplay.Skill.Structure;
 
 namespace Gameplay.Character.Behaviour
 {

@@ -1,10 +1,8 @@
-﻿using Gamecore.MobManager.Interface;
-using Gameplay.Character.Interface;
+﻿using Gameplay.Character.Interface;
 using Gameplay.Character.Structure;
 using Gameplay.Damageable.Behaviour;
 using Gameplay.Weapon.Interface;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Gameplay.Character.Behaviour
 {

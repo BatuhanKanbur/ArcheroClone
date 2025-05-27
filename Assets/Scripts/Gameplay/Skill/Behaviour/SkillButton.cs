@@ -2,7 +2,6 @@
 using Cysharp.Threading.Tasks;
 using Gamecore.AssetManager.Behaviour;
 using Gameplay.Skill.Interface;
-using Gameplay.Skill.Structure;
 using UnityEngine;
 using UnityEngine.UI;
 

@@ -1,8 +1,6 @@
 ﻿using System;
-using Gamecore.MobManager.Interface;
 using Gameplay.Weapon.Interface;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace Gameplay.Character.Interface
 {

@@ -4,6 +4,5 @@ namespace Gameplay.Character.Interface
 {
     public interface ICharacterSkillController : ISkillController, ICharacterComponent
     {
-        // public 
     }
 }

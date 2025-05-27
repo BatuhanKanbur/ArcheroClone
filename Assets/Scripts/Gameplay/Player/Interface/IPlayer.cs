@@ -1,5 +1,4 @@
-﻿using Gamecore.MobManager.Interface;
-using Gameplay.Character.Interface;
+﻿using Gameplay.Character.Interface;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

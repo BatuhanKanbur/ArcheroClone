@@ -1,7 +1,6 @@
 ﻿using System;
 using Cysharp.Threading.Tasks;
 using Gameplay.Character.Interface;
-using UnityEngine;
 
 namespace Gamecore.MobManager.Interface
 {

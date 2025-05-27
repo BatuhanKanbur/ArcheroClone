@@ -1,11 +1,10 @@
 ﻿using System;
 using Gamecore.AnimatorBehaviour.Enums;
-using Gamecore.Character.Structure;
+using Gamecore.AnimatorBehaviour.Structure;
 using Gameplay.Character.Interface;
 using Gameplay.Character.Structure;
 using Gameplay.Damageable.Interface;
 using Gameplay.Skill.Structure;
-using UnityEngine;
 using static UnityEngine.Object;
 using EventType = Gamecore.AnimatorBehaviour.Enums.EventType;
 

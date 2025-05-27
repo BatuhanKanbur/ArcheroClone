@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using EventType = Gamecore.AnimatorBehaviour.Enums.EventType;
 
-namespace Gamecore.Character.Structure
+namespace Gamecore.AnimatorBehaviour.Structure
 {
     [Serializable]
     public class AnimatorEvent

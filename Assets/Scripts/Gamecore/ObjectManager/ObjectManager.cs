@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using Gamecore.AssetManager;
 using Gamecore.AssetManager.Behaviour;
 using UnityEngine;
 using UnityEngine.AddressableAssets;

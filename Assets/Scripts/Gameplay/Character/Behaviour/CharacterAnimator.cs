@@ -1,10 +1,9 @@
 ﻿using System;
 using Gamecore.AnimatorBehaviour.Behaviour;
 using Gamecore.AnimatorBehaviour.Enums;
-using Gamecore.Character.Structure;
+using Gamecore.AnimatorBehaviour.Structure;
 using Gameplay.Character.Interface;
 using UnityEngine;
-using UnityEngine.Animations;
 using static Gameplay.Character.Constants.AnimatorConstants;
 
 namespace Gameplay.Character.Behaviour

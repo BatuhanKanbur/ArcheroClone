@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using Gamecore.AssetManager.Behaviour;
 using Gamecore.MobManager.Interface;
 using Gamecore.MobManager.Structure;
-using Gameplay.Skill.Structure;
 using UnityEngine;
 
 namespace Gamecore.MobManager.Behaviours

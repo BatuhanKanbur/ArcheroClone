@@ -1,6 +1,6 @@
 using System;
 using Gamecore.AnimatorBehaviour.Enums;
-using Gamecore.Character.Structure;
+using Gamecore.AnimatorBehaviour.Structure;
 using UnityEngine;
 using EventType = Gamecore.AnimatorBehaviour.Enums.EventType;
 

@@ -1,5 +1,4 @@
-﻿using System;
-using Gameplay.Damageable.Interface;
+﻿using Gameplay.Damageable.Interface;
 using Gameplay.Damageable.Structure;
 using Gameplay.Weapon.Interface;
 using UnityEngine;
