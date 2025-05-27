@@ -16,7 +16,7 @@ namespace Gameplay.Character.Behaviour
         public Transform LeftHand { get; }
         public Transform RightHand { get; }
         public Transform IKTarget { get; private set; }
-        private readonly AimConstraint[] _aimConstraints;
+        private readonly CharacterAimController[] _aimConstraints;
         private readonly StateMachineBehaviour[] _stateMachineBehaviours;
         public CharacterAnimator(ICharacter character,Transform ikTarget)
         {
@@ -25,9 +25,8 @@ namespace Gameplay.Character.Behaviour
             LeftHand = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
             RightHand = Animator.GetBoneTransform(HumanBodyBones.RightHand);
             IKTarget = ikTarget;
-            _aimConstraints = Animator.GetComponentsInChildren<AimConstraint>();
+            _aimConstraints = Animator.GetComponentsInChildren<CharacterAimController>();
             _stateMachineBehaviours = Animator.GetBehaviours<StateMachineBehaviour>();
-            SetAimConstraintsActive(false);
         }
         public void Subscribe(AnimationType animationType, Action<AnimatorEvent> callback)
         {
@@ -46,7 +45,7 @@ namespace Gameplay.Character.Behaviour
         public void SetAimConstraintsActive(bool active)
         {
             foreach (var aimConstraint in _aimConstraints)
-                aimConstraint.constraintActive = active;
+                aimConstraint.SetActive(active);
         }
         public void SetIKTargetPosition(Vector3 position)
         {

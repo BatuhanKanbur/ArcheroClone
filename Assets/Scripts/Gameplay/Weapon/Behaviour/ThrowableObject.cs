@@ -14,6 +14,7 @@ namespace Gameplay.Weapon.Behaviour
         [Range(0,45)]
         [SerializeField] private float throwAngle = 45f;
         [SerializeField] private Rigidbody rb;
+        [SerializeField] private GameObject fireEffect;
         private int _bounceCount;
         private int _currentTargetIndex;
         private Vector3[] _targetPositions;
@@ -23,6 +24,7 @@ namespace Gameplay.Weapon.Behaviour
             _currentTargetIndex = 0;
             WeaponStats = weapon;
             _targetPositions = targetPositions;
+            fireEffect.SetActive(WeaponStats.BurnDuration>0);
             LaunchToTarget(_targetPositions[_bounceCount]);
         }
         private void OnCollisionEnter(Collision collision)

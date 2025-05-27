@@ -1,8 +1,10 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using Gamecore.AssetManager.Constants;
 using Gamecore.MobManager.Interface;
 using Gamecore.MobManager.Structure;
+using Gamecore.ObjectManager;
 using Gameplay.Character.Interface;
 using Gameplay.Damageable.Interface;
 using Gameplay.Damageable.Structure;
@@ -16,6 +18,7 @@ namespace Gameplay.Enemy.Behaviour
     {
         private Action<IMob> _onMobDispose;
         private MobStats _mobStats;
+        private GameObject _damageOverEffect;
         public Transform Transform => transform;
         public int EarnedScore => _mobStats.EarnedScore;
         private CancellationTokenSource _cts = new();
@@ -25,6 +28,7 @@ namespace Gameplay.Enemy.Behaviour
             _cts = new CancellationTokenSource();
             _mobStats = statsData as MobStats;
             TargetManager = targetManager;
+            _damageOverEffect?.SetActive(false);
             base.Initialize();
             _onMobDispose = onDispose;
             Status.OnDeath += OnDeath;
@@ -53,12 +57,16 @@ namespace Gameplay.Enemy.Behaviour
         public async UniTaskVoid DamageOverTime(DamageStats damageStats, float duration)
         {
             var elapsedTime = 0f;
+            _damageOverEffect = await ObjectManager.GetObject(AssetConstants.FireParticle, transform.position, Quaternion.identity);
+            _damageOverEffect.transform.eulerAngles = new Vector3(-90, 0, 0f);
+            _damageOverEffect.transform.SetParent(transform);
             while (elapsedTime < duration && !_cts.IsCancellationRequested)
             {
                 elapsedTime += 1;
                 Status.OnHit(damageStats.Damage);
                 await UniTask.Delay(1000 ,cancellationToken: _cts.Token);
             }
+            _damageOverEffect.SetActive(false);
         }
     }
 }
