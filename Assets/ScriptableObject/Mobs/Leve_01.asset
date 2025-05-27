@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Leve_01
   m_EditorClassIdentifier: 
   maxMobCount: 5
-  horizontalLimits: {x: -5, y: 5}
-  verticalLimits: {x: -7, y: 7}
+  horizontalLimits: {x: -10, y: 10}
+  verticalLimits: {x: -10, y: 10}
   mobs:
   - {fileID: 11400000, guid: 59b76fd2e4d83014c9023ebe81d0dd83, type: 2}

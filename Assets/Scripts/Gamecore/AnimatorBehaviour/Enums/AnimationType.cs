@@ -4,7 +4,8 @@
     {
         Idle,
         Move,
-        Attack,
+        AttackStart,
+        AttackEnd,
         Hit,
         Death,
     }

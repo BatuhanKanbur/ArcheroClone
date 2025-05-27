@@ -37,15 +37,21 @@ namespace Gameplay.Weapon.Structure
                 RightHandObject?.SetParent(rightHand);
             }
         }
-        public async UniTaskVoid SpawnThrowable()
+        public void Attack(Vector3[] closetDamageables)
+        {
+            RightHandObject?.SetActive(false);
+            SpawnThrowable(closetDamageables).Forget();
+        }
+        public void AttackEnd()
+        {
+            RightHandObject?.SetActive(true);
+        }
+        public async UniTaskVoid SpawnThrowable(Vector3[] closetDamageables)
         {
             if (!throwableObject.IsAssigned()) return;
             var throwable = await ObjectManager.GetObject(throwableObject, GetSpawnPoint.position, GetSpawnPoint.rotation);
-        }
-        public void Attack()
-        {
-            RightHandObject?.SetActive(false);
-            _ = SpawnThrowable();
+            var throwableComponent = throwable.GetComponent<IThrowable>();
+            throwableComponent?.Init(WeaponStats,closetDamageables);
         }
         public void ApplySkill(StatsData[] skillStats)
         {

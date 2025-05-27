@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillID: 0
   skillName: Bounce
-  skillDuration: 100
+  skillDuration: 50
   statsModifiers:
   - {fileID: 11400000, guid: 9e809503b5c680d4fb56045231f7e52f, type: 2}
+  skillIcon:
+    m_AssetGUID: 31d66e1003d5f9c4baeda62680856987
+    m_SubObjectName: Bounce_Icon
+    m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_EditorAssetChanged: 1

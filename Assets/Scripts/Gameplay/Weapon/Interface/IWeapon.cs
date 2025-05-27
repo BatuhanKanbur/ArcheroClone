@@ -11,7 +11,8 @@ namespace Gameplay.Weapon.Interface
         public IWeaponObject RightHandObject { get; }
         public Transform GetSpawnPoint { get; }
         public UniTaskVoid SpawnWeapon(Transform leftHand, Transform rightHand);
-        public UniTaskVoid SpawnThrowable();
-        public void Attack();
+        public UniTaskVoid SpawnThrowable(Vector3[] closetDamageables);
+        public void Attack(Vector3[] closetDamageables);
+        public void AttackEnd();
     }
 }

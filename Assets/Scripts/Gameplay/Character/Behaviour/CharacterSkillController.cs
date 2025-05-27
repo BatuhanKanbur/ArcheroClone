@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Gameplay.Character.Enum;
 using Gameplay.Character.Interface;
-using Gameplay.Skill.Enum;
 using Gameplay.Skill.Interface;
 using Gameplay.Skill.Structure;
 
@@ -15,21 +15,21 @@ namespace Gameplay.Character.Behaviour
         {
             Character = character;
         }
-        public void UseSkill(SkillData skill)
+        public void UseSkill(ISkill skill)
         {
             if (_skills.Contains(skill)) return;
             _skills.Add(skill);
-            skill.UseSkill(Character.Status);
+            skill.UseSkill(Character.Status,Character.CurrentWeapon as ISkillable);
         }
 
-        public void CancelSkill(SkillData skill)
+        public void CancelSkill(ISkill skill)
         {
             if (_skills.Contains(skill))
                 _skills.Remove(skill);
-            skill.RemoveSkill(Character.Status);
+            skill.RemoveSkill(Character.Status,Character.CurrentWeapon as ISkillable);
         }
 
-        public SkillState GetSkillState(SkillData skill) => _skills.Contains(skill) ? SkillState.Using : SkillState.Usable;
+        public CharacterSkillState GetSkillState(ISkill skill) => _skills.Contains(skill) ? CharacterSkillState.Using : CharacterSkillState.Usable;
     
         public void Update()
         {
@@ -37,15 +37,15 @@ namespace Gameplay.Character.Behaviour
             {
                 skill.TickSkill();
                 if (skill.IsFinished)
-                    CancelSkill(skill as SkillData);
+                    CancelSkill(skill);
             }
         }
 
         public void Reset() => Dispose();
         public void Dispose()
         {
-            foreach (var skill in _skills.ToList())
-                CancelSkill(skill as SkillData);
+            for (var i = _skills.Count - 1; i >= 0; i--)
+                CancelSkill(_skills[i]);
         }
     }
 }

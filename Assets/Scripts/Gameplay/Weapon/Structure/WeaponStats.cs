@@ -27,21 +27,23 @@ namespace Gameplay.Weapon.Structure
         }
         public static WeaponStats operator +(WeaponStats a, WeaponStats b)
         {
-            return new WeaponStats(
-                a.baseDamage + b.baseDamage,
-                a.arrowCount + b.arrowCount,
-                a.burnDuration + b.burnDuration,
-                a.bounceCount + b.bounceCount
-            );
+            var newStats = CreateInstance<WeaponStats>();
+            newStats.multiplier = a.multiplier + b.multiplier;
+            newStats.baseDamage = a.baseDamage + b.baseDamage;
+            newStats.arrowCount = a.arrowCount + b.arrowCount;
+            newStats.burnDuration = a.burnDuration + b.burnDuration;
+            newStats.bounceCount = a.bounceCount + b.bounceCount;
+            return newStats;
         }
         public static WeaponStats operator -(WeaponStats a, WeaponStats b)
         {
-            return new WeaponStats(
-                a.baseDamage - b.baseDamage,
-                a.arrowCount - b.arrowCount,
-                a.burnDuration - b.burnDuration,
-                a.bounceCount - b.bounceCount
-            );
+            var newStats = CreateInstance<WeaponStats>();
+            newStats.multiplier = a.multiplier - b.multiplier;
+            newStats.baseDamage = a.baseDamage - b.baseDamage;
+            newStats.arrowCount = a.arrowCount - b.arrowCount;
+            newStats.burnDuration = a.burnDuration - b.burnDuration;
+            newStats.bounceCount = a.bounceCount - b.bounceCount;
+            return newStats;
         }
     }
 }

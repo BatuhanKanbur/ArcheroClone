@@ -25,10 +25,10 @@ namespace Gamecore.MobManager.Behaviours
             _spawnPositionStrategy = spawnPositionStrategy;
         }
 
-        public async UniTask<Tuple<IMob,StatsData>[]> SpawnMobsAsync(int targetMobCount, MobSet mobSet)
+        public async UniTask<MobInstance[]> SpawnMobsAsync(int targetMobCount, MobSet mobSet)
         {
             targetMobCount = Mathf.Clamp(targetMobCount, 0, mobSet.maxMobCount);
-            var spawnedMobs = new List<Tuple<IMob,StatsData>>();
+            var spawnedMobs = new List<MobInstance>();
             var spawnedCount = 0;
             for (var i = 0; spawnedCount < targetMobCount; i++)
             {
@@ -37,7 +37,7 @@ namespace Gamecore.MobManager.Behaviours
                     if(!mobType.IsSpawnable) continue;
                     var spawnPosition = _spawnPositionStrategy.GetSpawnPosition(mobSet.horizontalLimits, mobSet.verticalLimits);
                     var spawnedMob = await _mobFactory.CreateMobAsync(mobType, spawnPosition, Quaternion.identity);
-                    spawnedMobs.Add(new Tuple<IMob, StatsData>(spawnedMob.Item1, spawnedMob.Item2));
+                    spawnedMobs.Add(new MobInstance(spawnedMob.Item1, spawnedMob.Item2));
                     spawnedCount++;
                     if (spawnedCount >= targetMobCount)
                         break;

@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillID: 0
   skillName: Rage
-  skillDuration: 100
+  skillDuration: 50
   statsModifiers:
   - {fileID: 11400000, guid: 298252330e5ab9843a5ec2cbdaf28424, type: 2}
   - {fileID: 11400000, guid: 3aec8fa624cdf554ea9ff8f4acb74d0e, type: 2}
+  skillIcon:
+    m_AssetGUID: 31d66e1003d5f9c4baeda62680856987
+    m_SubObjectName: Rage_Icon
+    m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_EditorAssetChanged: 1

@@ -4,6 +4,6 @@ namespace Gamecore.MobManager.Interface
 {
     public interface ISpawnPositionStrategy
     {
-        Vector3 GetSpawnPosition(Vector2 horizontalLimits, Vector2 verticalLimits);
+        public Vector3Int GetSpawnPosition(Vector2Int horizontalLimits, Vector2Int verticalLimits);
     }
 }

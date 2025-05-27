@@ -5,11 +5,11 @@ namespace Gamecore.MobManager.Behaviours
 {
     public class SpawnStrategy : ISpawnPositionStrategy
     {
-        public Vector3 GetSpawnPosition(Vector2 horizontalLimits, Vector2 verticalLimits)
+        public Vector3Int GetSpawnPosition(Vector2Int horizontalLimits, Vector2Int verticalLimits)
         {
             var horizontalPosition = Random.Range(horizontalLimits.x, horizontalLimits.y);
             var verticalPosition = Random.Range(verticalLimits.x, verticalLimits.y);
-            return new Vector3(horizontalPosition, 0, verticalPosition);
+            return new Vector3Int(horizontalPosition, 0, verticalPosition);
         }
     }
 }

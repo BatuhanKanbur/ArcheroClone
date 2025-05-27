@@ -32,6 +32,13 @@ namespace Gameplay.Character.Behaviour
             if(_health <= 0)
                 OnDeath?.Invoke();
         }
+        public void SetStats(ICharacterStats stats)
+        {
+            _characterStats = stats as CharacterStats;
+            if (!_characterStats) return;
+            _health = _characterStats.Health;
+            HealthBar?.SetHealth(_health, _characterStats.Health);
+        }
         public void ApplySkill(StatsData[] skillStats)
         {
             foreach (var modifier in skillStats) 

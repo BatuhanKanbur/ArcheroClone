@@ -7,5 +7,9 @@ namespace Gamecore.AssetManager.Constants
         public const string MobStatsAddress = "MobStats";
         public const string MobDataAddress = "MobData";
         public const string PlayerStatsAddress = "PlayerStats";
+        public const string SkillUIButtonAddress = "Skill_Button";
+        public const string SkillLabelAddress = "Skill";
+        public const string PlayerAddress = "Player";
+
     }
 }

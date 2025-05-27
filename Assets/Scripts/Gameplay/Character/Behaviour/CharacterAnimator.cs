@@ -15,14 +15,16 @@ namespace Gameplay.Character.Behaviour
         public Animator Animator { get; }
         public Transform LeftHand { get; }
         public Transform RightHand { get; }
+        public Transform IKTarget { get; private set; }
         private readonly AimConstraint[] _aimConstraints;
         private readonly StateMachineBehaviour[] _stateMachineBehaviours;
-        public CharacterAnimator(ICharacter character)
+        public CharacterAnimator(ICharacter character,Transform ikTarget)
         {
             Character = character;
             Animator = Character.Animator;
             LeftHand = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
             RightHand = Animator.GetBoneTransform(HumanBodyBones.RightHand);
+            IKTarget = ikTarget;
             _aimConstraints = Animator.GetComponentsInChildren<AimConstraint>();
             _stateMachineBehaviours = Animator.GetBehaviours<StateMachineBehaviour>();
             SetAimConstraintsActive(false);
@@ -31,18 +33,25 @@ namespace Gameplay.Character.Behaviour
         {
             foreach (var stateMachineBehaviour in _stateMachineBehaviours)
                 if (stateMachineBehaviour is AnimatorStateMachine playerAnimationState)
-                    playerAnimationState.AddListener(callback);
+                    if( playerAnimationState.animationType == animationType)
+                        playerAnimationState.AddListener(callback);
         }
         public void Unsubscribe(AnimationType animationType, Action<AnimatorEvent> callback)
         {
             foreach (var stateMachineBehaviour in _stateMachineBehaviours)
                 if (stateMachineBehaviour is AnimatorStateMachine playerAnimationState)
-                    playerAnimationState.RemoveListener(callback);
+                    if( playerAnimationState.animationType == animationType)
+                        playerAnimationState.RemoveListener(callback);
         }
         public void SetAimConstraintsActive(bool active)
         {
             foreach (var aimConstraint in _aimConstraints)
                 aimConstraint.constraintActive = active;
+        }
+        public void SetIKTargetPosition(Vector3 position)
+        {
+            if (!IKTarget) return;
+            IKTarget.position = position;
         }
         public void SetMovementInput(float input) => Animator.SetFloat(MovementInputKey, input);
         

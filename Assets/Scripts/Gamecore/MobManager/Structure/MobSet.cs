@@ -6,7 +6,7 @@ namespace Gamecore.MobManager.Structure
     public class MobSet : ScriptableObject
     {
         public int maxMobCount;
-        public Vector2 horizontalLimits, verticalLimits;
+        public Vector2Int horizontalLimits, verticalLimits;
         public MobData[] mobs;
     }
 }

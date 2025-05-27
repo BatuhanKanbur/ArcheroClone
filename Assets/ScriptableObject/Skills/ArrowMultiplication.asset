@@ -13,7 +13,13 @@ MonoBehaviour:
   m_Name: ArrowMultiplication
   m_EditorClassIdentifier: 
   skillID: 0
-  skillName: Arrow Multiplication
-  skillDuration: 100
+  skillName: Multiplication
+  skillDuration: 50
   statsModifiers:
   - {fileID: 11400000, guid: 9e7b7e95aa9b6a64ab62f2808a571548, type: 2}
+  skillIcon:
+    m_AssetGUID: 31d66e1003d5f9c4baeda62680856987
+    m_SubObjectName: MultiplerArrow_Icon
+    m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_EditorAssetChanged: 1

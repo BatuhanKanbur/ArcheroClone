@@ -1,5 +1,6 @@
 ﻿using Gameplay.Skill.Interface;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace Gameplay.Skill.Structure
 {
@@ -7,8 +8,14 @@ namespace Gameplay.Skill.Structure
     public class SkillData : SkillModifier, ISkill
     {
         [SerializeField] private StatsData[] statsModifiers;
-        public bool IsFinished => _skillTimer >= skillDuration;
+        public AssetReferenceSprite skillIcon;
         private float _skillTimer;
+        public string Name => skillName;
+        public AssetReferenceSprite Icon => skillIcon;
+        public float GetCooldown => skillDuration - (skillDuration - _skillTimer);
+        public float Duration => skillDuration;
+        public float Timer => _skillTimer;
+        public bool IsFinished => _skillTimer >= skillDuration;
         public StatsData[] Modifiers => statsModifiers;
         public void UseSkill(params ISkillable[] targets)
         {

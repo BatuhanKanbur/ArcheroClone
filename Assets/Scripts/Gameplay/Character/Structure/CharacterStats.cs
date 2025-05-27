@@ -25,19 +25,21 @@ namespace Gameplay.Character.Structure
 
         public static CharacterStats operator +(CharacterStats a, CharacterStats b)
         {
-            return new CharacterStats(
-                a.movementSpeed + b.movementSpeed,
-                a.rotationSpeed + b.rotationSpeed,
-                a.attackSpeed + b.attackSpeed
-            );
+            var newStats = CreateInstance<CharacterStats>();
+            newStats.multiplier = a.multiplier + b.multiplier;
+            newStats.movementSpeed = a.movementSpeed + b.movementSpeed;
+            newStats.rotationSpeed = a.rotationSpeed + b.rotationSpeed;
+            newStats.attackSpeed = a.attackSpeed + b.attackSpeed;
+            return newStats;
         }
         public static CharacterStats operator -(CharacterStats a, CharacterStats b)
         {
-            return new CharacterStats(
-                a.movementSpeed - b.movementSpeed,
-                a.rotationSpeed - b.rotationSpeed,
-                a.attackSpeed - b.attackSpeed
-            );
+            var newStats = CreateInstance<CharacterStats>();
+            newStats.multiplier = a.multiplier - b.multiplier;
+            newStats.movementSpeed = a.movementSpeed - b.movementSpeed;
+            newStats.rotationSpeed = a.rotationSpeed - b.rotationSpeed;
+            newStats.attackSpeed = a.attackSpeed - b.attackSpeed;
+            return newStats;
         }
     }
 }

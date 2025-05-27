@@ -1,12 +1,16 @@
-﻿using Gamecore.AnimatorBehaviour.Enums;
+﻿using System.Linq;
+using Gamecore.AnimatorBehaviour.Enums;
 using Gamecore.Character.Structure;
 using Gameplay.Character.Interface;
 using Gameplay.Weapon.Interface;
 using UnityEngine;
 using EventType = Gamecore.AnimatorBehaviour.Enums.EventType;
+using static UnityEngine.Object;
+
 
 namespace Gameplay.Character.Behaviour
 {
+    using Gameplay.Weapon.Structure;
     public class CharacterCombat : ICharacterCombat
     {
         public ICharacter Character { get; }
@@ -14,12 +18,14 @@ namespace Gameplay.Character.Behaviour
         private bool HasMoving => Character.Movement.HasMoving;
         private float _attackTime;
         private int _currentClipHash;
-        public CharacterCombat(ICharacter character,IWeapon weapon)
+        private Vector3[] _closetDamageables;
+        public CharacterCombat(ICharacter character,Weapon weapon)
         {
             Character = character;
-            Weapon = weapon;
+            Weapon = Instantiate(weapon);
             Weapon.SpawnWeapon(Character.Animation.LeftHand, Character.Animation.RightHand).Forget();
-            Character.Animation.Subscribe(AnimationType.Attack, OnAttackEvent);
+            Character.Animation.Subscribe(AnimationType.AttackStart, OnAttackStartEvent);
+            Character.Animation.Subscribe(AnimationType.AttackEnd, OnAttackEndEvent);
         }
         public void Update()
         {
@@ -31,9 +37,11 @@ namespace Gameplay.Character.Behaviour
         }
         private void Attack()
         {
+            _closetDamageables = Character.GetClosetTargetPositions(Weapon.WeaponStats.BounceCount);
+            Character.Animation.SetIKTargetPosition(_closetDamageables.First());
             Character.Animation.SetAttack();
         }
-        private void OnAttackEvent(AnimatorEvent animationEvent)
+        private void OnAttackStartEvent(AnimatorEvent animationEvent)
         {
             switch (animationEvent.eventType)
             {
@@ -44,8 +52,22 @@ namespace Gameplay.Character.Behaviour
                 case EventType.Update when _currentClipHash == animationEvent.ClipHash:
                     break;
                 case EventType.End when _currentClipHash == animationEvent.ClipHash:
+                    Weapon?.Attack(_closetDamageables);
+                    _currentClipHash = 0;
+                    break;
+            }
+        }
+        private void OnAttackEndEvent(AnimatorEvent animationEvent)
+        {
+            switch (animationEvent.eventType)
+            {
+                case EventType.Start:
+                case EventType.Update when _currentClipHash == animationEvent.ClipHash:
+                    break;
+                case EventType.End:
                     _currentClipHash = 0;
                     Character.Animation.SetAimConstraintsActive(false);
+                    Weapon?.AttackEnd();
                     break;
             }
         }
@@ -53,7 +75,8 @@ namespace Gameplay.Character.Behaviour
         public void Reset() { }
         public void Dispose()
         {
-            Character.Animation.Unsubscribe(AnimationType.Attack, OnAttackEvent);
+            Character.Animation.Unsubscribe(AnimationType.AttackStart, OnAttackStartEvent);
+            Character.Animation.Unsubscribe(AnimationType.AttackEnd, OnAttackEndEvent);
         }
     }
 }

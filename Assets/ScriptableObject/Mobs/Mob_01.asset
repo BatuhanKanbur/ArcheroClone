@@ -19,4 +19,4 @@ MonoBehaviour:
     m_SubObjectType: 
     m_EditorAssetChanged: 0
   mobStats:
-  - {fileID: 11400000, guid: 5d3032ca49ec3f742b16c343a049cca6, type: 2}
+  - {fileID: 11400000, guid: a0a7c5eabeb56f443bc959a2ad7d64a5, type: 2}

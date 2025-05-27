@@ -12,15 +12,15 @@ namespace Gameplay.Skill.Structure
         }
         public static StatsData operator +(StatsData a, StatsData b)
         {
-            return new StatsData(
-                a.multiplier + b.multiplier
-            );
+            var newStats = CreateInstance<StatsData>();
+            newStats.multiplier = a.multiplier + b.multiplier;
+            return newStats;
         }
         public static StatsData operator -(StatsData a, StatsData b)
         {
-            return new StatsData(
-                a.multiplier - b.multiplier
-            );
+            var newStats = CreateInstance<StatsData>();
+            newStats.multiplier = a.multiplier + b.multiplier;
+            return newStats;
         }
     }
 }

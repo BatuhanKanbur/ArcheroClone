@@ -1,8 +1,10 @@
-﻿namespace Gameplay.Weapon.Interface
+﻿using UnityEngine;
+
+namespace Gameplay.Weapon.Interface
 {
     public interface IThrowable
     {
         public IWeaponStats WeaponStats { get; set; }
-        public void Init(IWeaponStats weapon);
+        public void Init(IWeaponStats weapon,Vector3[] targetPositions);
     }
 }

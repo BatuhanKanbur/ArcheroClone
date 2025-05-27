@@ -2,7 +2,8 @@
 {
     public enum SkillState
     {
+        NotUsing,
         Using,
-        Usable,
+        Ended,
     }
 }

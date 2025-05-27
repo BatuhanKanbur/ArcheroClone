@@ -10,5 +10,6 @@ namespace Gameplay.Character.Interface
         public ICharacterStats Stats { get; }
         public IHealthBar HealthBar { get; }
         public void OnHit(float damage);
+        public void SetStats(ICharacterStats stats);
     }
 }

@@ -21,6 +21,7 @@ namespace Gameplay.Damageable.Behaviour
         public void SetHealth(float health, float maxHealth)
         {
             healthText.text = health.ToString(CultureInfo.InvariantCulture);
+            healthBarImage.fillAmount = health / maxHealth;
         }
         public void Reset()
         {

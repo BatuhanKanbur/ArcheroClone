@@ -1,4 +1,6 @@
 ﻿using System;
+using Gamecore.MobManager.Interface;
+using Gameplay.Character.Interface;
 using Gameplay.Player.Interface;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -9,9 +11,13 @@ namespace Gameplay.Player.Behaviour
     public class Player : Character, IPlayer
     {
         private Camera _mainCamera;
-        public new void Initialize()
+        public Transform Transform => transform;
+        public ICharacter Character => this;
+
+        public void Initialize(ITargetManager targetManager)
         {
             _mainCamera = Camera.main;
+            TargetManager = targetManager;
             base.Initialize();
         }
         public void OnMove(InputValue input)

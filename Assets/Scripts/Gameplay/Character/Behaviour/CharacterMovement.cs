@@ -6,17 +6,15 @@ namespace Gameplay.Character.Behaviour
     public class CharacterMovement : ICharacterMovement
     {
         public ICharacter Character { get; }
-        private readonly Transform _cameraTransform;
         private readonly CharacterController _controller;
         public bool HasMoving => _moveInput.magnitude > 0.01f;
         private float _targetSpeed,_currentSpeed,_rotationVelocity,_moveTime;
         private Vector3 _moveInput;
 
-        public CharacterMovement(ICharacter character, Transform cameraTransform)
+        public CharacterMovement(ICharacter character)
         {
             Character = character;
             _controller = character.CharacterController;
-            _cameraTransform = cameraTransform;
         }
         public void Update()
         {

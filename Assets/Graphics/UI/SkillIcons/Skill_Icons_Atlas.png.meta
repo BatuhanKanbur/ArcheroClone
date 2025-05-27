@@ -1,0 +1,2767 @@
+fileFormatVersion: 2
+guid: 31d66e1003d5f9c4baeda62680856987
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rage_Icon
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91694f6a27b19c04abea6b033007205d
+      internalID: -550592706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7a9e05af9eaf34408d0d1e4b7253ea8
+      internalID: -8468070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17b5203e848d46b4489dd1b103bdcb71
+      internalID: 1378363073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449de75c209de224c8782be5848cd594
+      internalID: 536983170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bounce_Icon
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d88d9bab3d68e1c4aac05ccad3c98e70
+      internalID: 1142786181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686274dcbe3005643bd7578a2dd8ac0f
+      internalID: -180096392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d00d6fb1962d34da45d2f688bc7cf5
+      internalID: 501678484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f7134b910c8aa4e80f34fd413db2c5
+      internalID: 1464609562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0334093485ec89e4fb007b334f8ad811
+      internalID: -344838081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f0b8f4da2244e44ba2db99712f13ead
+      internalID: 624975237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa742e83a49c843498ca785af9d214d2
+      internalID: -2072528046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 740
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b0350ad78ae5a4bb045ab0dc85d05a
+      internalID: 221064248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3130c48362b0cf4aa35c484a82801e6
+      internalID: 1858680498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6079956088970794ca7119b005381ff2
+      internalID: -312800918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dd69115892fe264a97f1d93bd232000
+      internalID: 1274798916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543240e81bf6a284b99b4db394ca76a9
+      internalID: 636680614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791d9e2130bcac94995fd58d01a3e2e0
+      internalID: -14403123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb01b8049f8008848b0ee9953957f597
+      internalID: 1451461921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 424949819922f454298681ad73d6dbcd
+      internalID: 1930175496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 250cd3ef5e20a0c42bfff4d7ae56c104
+      internalID: -582674793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271684b769ab95f49856210b61dbb358
+      internalID: -1081177993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737d340385e61914c9d276971e14968a
+      internalID: -1968704626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e84a8d6f30e9b41980f0ea224e253c
+      internalID: -1553402097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 658
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6f61eb145d5794f8351e726d78cab5
+      internalID: -525557350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379d62c1c9e01524ca6d0d52a290bfed
+      internalID: -1444952147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964edbb37a5510a4ba820af6a8de7179
+      internalID: 2109424871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cfed5410870b749a8d72af64d452d4
+      internalID: -1945741504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d6c5ca408f760e40a1a2fadb7ba8f90
+      internalID: 1968781972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5b089111314c6f4daabbd960b1c2bc3
+      internalID: 781858447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AttackSpeed_Icon
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3ccf3b18e92a54d84f5f2eff2c98e4
+      internalID: -307386217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3686c3b22026840b398f7a709b1e78
+      internalID: -811721693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91dda03b931a4f419d1a51c519f2b40
+      internalID: 351559034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195809fefb308564ead006807de0ab56
+      internalID: -532340589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c258e33dd691a5438a394485323388a
+      internalID: -272735983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3ba01c5359c5b4cb6d759ada48e7de
+      internalID: 2085945520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 576
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262de57416c6fb64690a6cf405ba40e0
+      internalID: -1711122459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4686a9d7dd60e41a0e39a4df0f86a0
+      internalID: 1627219754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2101d559f5a34147beb7bfad92c1540
+      internalID: 1126418581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 000e93f7201aa214f88f5a3a01627551
+      internalID: -690337535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f734b4c7c9be7c43ad91f3edddd6ae1
+      internalID: -493642578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7827f772f1376aa45b7fd6b5f0c84173
+      internalID: 465810754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37024ed089337f042abf6674713e1c6b
+      internalID: -1710282310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e5dd2d356fc9240bb3dfae266d569b
+      internalID: -14947164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_43
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00547e36c0e5c3c4bad60fef00754122
+      internalID: -1022760373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d06f87ba070f6a4eb3830fd72f7c419
+      internalID: 1464179727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0165f8715698ac0449af02e5282a6e4d
+      internalID: -1692674845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MultiplerArrow_Icon
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056e729acfc00104198e779bad7a3fcb
+      internalID: -653858861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 494
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 434e8f4b7b768ef44a0adc751e5b716f
+      internalID: -258707754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 244c9e38c8c22ce41965efa502782e8f
+      internalID: -602207581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_49
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b846778782c492147bc6c857efc8d45c
+      internalID: -160506334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_50
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3db6419ba477c947a22d341c4dd23df
+      internalID: -632961313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_51
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e86350cfc6d6c40a98ef6e48d6bb5f
+      internalID: 725644263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_52
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bc032341b538345ad466ae1e0b884f
+      internalID: -400102161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_53
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91db8d959efc3f046a9deb071ce0bc76
+      internalID: -814073581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burn_Icon
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b589ad8551c171f498ba829ad073d5f8
+      internalID: -1469156606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_55
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d8537f49019e544954de5251c22952
+      internalID: -1506302532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_56
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5636e5d352d61bf438b09709c1ea7f0f
+      internalID: 1798087767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_57
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdec50872879e57499cf28c69e133706
+      internalID: -2026407159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_58
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fb282c9865fc946ab6f98a265d6c91
+      internalID: -1486922452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_59
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 412
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03d86cd2bb2a7e848b67cbf396bdf220
+      internalID: -184762654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_60
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3457e907a28cd3440b4efdf1400f7095
+      internalID: 1152593665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_61
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a1ad82ff5872846b29d65fcc7f1079
+      internalID: -664589409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_62
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f79079f9f88954a9f484cce80fb0cd
+      internalID: -1254412413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_63
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bfd4805012912d47a09acb6209aec6f
+      internalID: -1558522674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_64
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646ab0931196ac148ad4327ecd020b7e
+      internalID: 2005482403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_65
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bf955b9686a3a845a3c4c15a159e121
+      internalID: -2043712769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_66
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a1fec6600f22e4b8b57cdd17ac0769
+      internalID: -905115860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_67
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a91042e0add579459141ab357251ce1
+      internalID: 1958056097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_68
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d2ba90de14d1e41af0bdd6358d47d9
+      internalID: -131946826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_69
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aceea12aa48fdfa43bd41d2265523a67
+      internalID: -1406271287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_70
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a852c57a002514093b545379fce844
+      internalID: 1362232363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_71
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 330
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e1b712d40cee446830f8b15a071349
+      internalID: -1678051897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_72
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e421c8bbd6741c04aa5108f54cb099f1
+      internalID: -458955723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_73
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b566a62434dde0745b5004f62e3b517e
+      internalID: 1245100071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_74
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1033ca8e4cf2d864f8f803186de0f286
+      internalID: -1779943004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_75
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf6ba3b40b752b49bf1e7124f6d4c2d
+      internalID: 2065399916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_76
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ebeaf12491e51b419469cf7e7e71937
+      internalID: 713984761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_77
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff45a050d4702624a9a7e30587361f40
+      internalID: -645263628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_78
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46215a48c05317b4283f62e7d603f9b6
+      internalID: -974389729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_79
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cce0ce6f9889f7048a0c5974d3dda332
+      internalID: 891101976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_80
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f821ac315faba80488a69b1e420d81ad
+      internalID: -1073270374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_81
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023ffe66befdd1d45b88fa4216f2f7d2
+      internalID: -276413997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_82
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09bf8b839093e24eb7de22340346c59
+      internalID: 906065623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_83
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 248
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c38a8d144d3ceca43bfbbb4afa218b50
+      internalID: 1870304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_84
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e7dc724c5c4214d8cd1e61b84293d0
+      internalID: -68224392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_85
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088a4758a6549c1459821bdc8cae79c2
+      internalID: -1850556605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_86
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1861a6489e69c6546a00a3038932d57a
+      internalID: -1277261550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_87
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7808ce5498bc14f48a612b3fc2ff72aa
+      internalID: 838758198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_88
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5941fbfd02ac1524e9cc5db80e26d030
+      internalID: 290971495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_89
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b97a2d56b4ec74e4782456ec3e784de9
+      internalID: 608641732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_90
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61bc60b3570f9b14d8cbb4d4618ca43f
+      internalID: -850786836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_91
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3eefc050222b284aa82a8f90cf1a79b
+      internalID: 2089491796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_92
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e65b5ddea6ab6274ebe3cf10a4ea3e31
+      internalID: 1164294016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_93
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6942b7fb0906e45844fd611052de08
+      internalID: -1556386100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_94
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeea687701cf07044a2fef19ae072451
+      internalID: -724276216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_95
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 166
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a3cde718b0328446939d6a17edaba8c
+      internalID: 624022095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_96
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39cccf8651da7140bf5f6d4546130bf
+      internalID: -166027310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_97
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fe86dda45b376b4db2d6094b55830ea
+      internalID: -1312784421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_98
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a5188d77e0489429bc932260fd4e08
+      internalID: 723163692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_99
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c88609299f9024dafd882624a0183a
+      internalID: 952576337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_100
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c129f6694aa59184c83115a95cfb2d17
+      internalID: -1318609007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_101
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27da23ff134182b4b9b1e390885f9cee
+      internalID: 1753184988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_102
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d3f8904c7a36e47a969529524b20c1
+      internalID: 651181024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_103
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 411dcb18975f1fc4e82df7e7c9dd160c
+      internalID: 1076954999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_104
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6254ad4ec142a9e4a99066285264350b
+      internalID: 1008545717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_105
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c921bdac4e57d1248b411b446acd7f7f
+      internalID: 943135798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_106
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92121a22005ddb440818c3a01fff45c2
+      internalID: 366523948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_107
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 84
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc5a36c62ae4ae4d8f44d0f07e98888
+      internalID: 2002417069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_108
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2f971a9281f24d40bddd6a73c4a47ce
+      internalID: 1988776826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_109
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c142ae811b6e044a86e6a8de7ec1a7
+      internalID: 778189962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_110
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e033d03575642514aa031e093e94b8b9
+      internalID: -381555208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_111
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4618e51bd82625d43a7623fc5060ac61
+      internalID: 1669270187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_112
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f3a808994e3a6418cd5e30fbc8366d
+      internalID: -1105326258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_113
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea46f7768d7b88458c8daa36553b58b
+      internalID: 1278593214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_114
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369ac9f82f0f8de49ad81381d1cd356c
+      internalID: 1105989861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_115
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8f2143785017de41991bb61d0c683c1
+      internalID: 566776625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_116
+      rect:
+        serializedVersion: 2
+        x: 744
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c0c14e169a4504f8a9c341b2de772b
+      internalID: -515723543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_117
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a96ef3250b5d14b80b7d12499265a0
+      internalID: 1370462724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_118
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4e5403222db6c4f982bceec176d3a3
+      internalID: 371815769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skill_Icons_Atlas_119
+      rect:
+        serializedVersion: 2
+        x: 984
+        y: 2
+        width: 80
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8d7c46841192541a1e8814872332f6
+      internalID: -2041743439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7f152208642475045a05fd4cfe08e3a7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      AttackSpeed_Icon: -307386217
+      Bounce_Icon: 1142786181
+      Burn_Icon: -1469156606
+      MultiplerArrow_Icon: -653858861
+      Rage_Icon: -550592706
+      Skill_Icons_Atlas_1: -8468070
+      Skill_Icons_Atlas_10: -2072528046
+      Skill_Icons_Atlas_100: -1318609007
+      Skill_Icons_Atlas_101: 1753184988
+      Skill_Icons_Atlas_102: 651181024
+      Skill_Icons_Atlas_103: 1076954999
+      Skill_Icons_Atlas_104: 1008545717
+      Skill_Icons_Atlas_105: 943135798
+      Skill_Icons_Atlas_106: 366523948
+      Skill_Icons_Atlas_107: 2002417069
+      Skill_Icons_Atlas_108: 1988776826
+      Skill_Icons_Atlas_109: 778189962
+      Skill_Icons_Atlas_11: 221064248
+      Skill_Icons_Atlas_110: -381555208
+      Skill_Icons_Atlas_111: 1669270187
+      Skill_Icons_Atlas_112: -1105326258
+      Skill_Icons_Atlas_113: 1278593214
+      Skill_Icons_Atlas_114: 1105989861
+      Skill_Icons_Atlas_115: 566776625
+      Skill_Icons_Atlas_116: -515723543
+      Skill_Icons_Atlas_117: 1370462724
+      Skill_Icons_Atlas_118: 371815769
+      Skill_Icons_Atlas_119: -2041743439
+      Skill_Icons_Atlas_12: 1858680498
+      Skill_Icons_Atlas_13: -312800918
+      Skill_Icons_Atlas_14: 1274798916
+      Skill_Icons_Atlas_15: 636680614
+      Skill_Icons_Atlas_16: -14403123
+      Skill_Icons_Atlas_17: 1451461921
+      Skill_Icons_Atlas_18: 1930175496
+      Skill_Icons_Atlas_19: -582674793
+      Skill_Icons_Atlas_2: 1378363073
+      Skill_Icons_Atlas_20: -1081177993
+      Skill_Icons_Atlas_21: -1968704626
+      Skill_Icons_Atlas_22: -1553402097
+      Skill_Icons_Atlas_23: -525557350
+      Skill_Icons_Atlas_24: -1444952147
+      Skill_Icons_Atlas_25: 2109424871
+      Skill_Icons_Atlas_26: -1945741504
+      Skill_Icons_Atlas_27: 1968781972
+      Skill_Icons_Atlas_28: 781858447
+      Skill_Icons_Atlas_3: 536983170
+      Skill_Icons_Atlas_30: -811721693
+      Skill_Icons_Atlas_31: 351559034
+      Skill_Icons_Atlas_32: -532340589
+      Skill_Icons_Atlas_33: -272735983
+      Skill_Icons_Atlas_34: 2085945520
+      Skill_Icons_Atlas_35: -1711122459
+      Skill_Icons_Atlas_36: 1627219754
+      Skill_Icons_Atlas_37: 1126418581
+      Skill_Icons_Atlas_38: -690337535
+      Skill_Icons_Atlas_39: -493642578
+      Skill_Icons_Atlas_40: 465810754
+      Skill_Icons_Atlas_41: -1710282310
+      Skill_Icons_Atlas_42: -14947164
+      Skill_Icons_Atlas_43: -1022760373
+      Skill_Icons_Atlas_44: 1464179727
+      Skill_Icons_Atlas_45: -1692674845
+      Skill_Icons_Atlas_47: -258707754
+      Skill_Icons_Atlas_48: -602207581
+      Skill_Icons_Atlas_49: -160506334
+      Skill_Icons_Atlas_5: -180096392
+      Skill_Icons_Atlas_50: -632961313
+      Skill_Icons_Atlas_51: 725644263
+      Skill_Icons_Atlas_52: -400102161
+      Skill_Icons_Atlas_53: -814073581
+      Skill_Icons_Atlas_55: -1506302532
+      Skill_Icons_Atlas_56: 1798087767
+      Skill_Icons_Atlas_57: -2026407159
+      Skill_Icons_Atlas_58: -1486922452
+      Skill_Icons_Atlas_59: -184762654
+      Skill_Icons_Atlas_6: 501678484
+      Skill_Icons_Atlas_60: 1152593665
+      Skill_Icons_Atlas_61: -664589409
+      Skill_Icons_Atlas_62: -1254412413
+      Skill_Icons_Atlas_63: -1558522674
+      Skill_Icons_Atlas_64: 2005482403
+      Skill_Icons_Atlas_65: -2043712769
+      Skill_Icons_Atlas_66: -905115860
+      Skill_Icons_Atlas_67: 1958056097
+      Skill_Icons_Atlas_68: -131946826
+      Skill_Icons_Atlas_69: -1406271287
+      Skill_Icons_Atlas_7: 1464609562
+      Skill_Icons_Atlas_70: 1362232363
+      Skill_Icons_Atlas_71: -1678051897
+      Skill_Icons_Atlas_72: -458955723
+      Skill_Icons_Atlas_73: 1245100071
+      Skill_Icons_Atlas_74: -1779943004
+      Skill_Icons_Atlas_75: 2065399916
+      Skill_Icons_Atlas_76: 713984761
+      Skill_Icons_Atlas_77: -645263628
+      Skill_Icons_Atlas_78: -974389729
+      Skill_Icons_Atlas_79: 891101976
+      Skill_Icons_Atlas_8: -344838081
+      Skill_Icons_Atlas_80: -1073270374
+      Skill_Icons_Atlas_81: -276413997
+      Skill_Icons_Atlas_82: 906065623
+      Skill_Icons_Atlas_83: 1870304
+      Skill_Icons_Atlas_84: -68224392
+      Skill_Icons_Atlas_85: -1850556605
+      Skill_Icons_Atlas_86: -1277261550
+      Skill_Icons_Atlas_87: 838758198
+      Skill_Icons_Atlas_88: 290971495
+      Skill_Icons_Atlas_89: 608641732
+      Skill_Icons_Atlas_9: 624975237
+      Skill_Icons_Atlas_90: -850786836
+      Skill_Icons_Atlas_91: 2089491796
+      Skill_Icons_Atlas_92: 1164294016
+      Skill_Icons_Atlas_93: -1556386100
+      Skill_Icons_Atlas_94: -724276216
+      Skill_Icons_Atlas_95: 624022095
+      Skill_Icons_Atlas_96: -166027310
+      Skill_Icons_Atlas_97: -1312784421
+      Skill_Icons_Atlas_98: 723163692
+      Skill_Icons_Atlas_99: 952576337
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 149b778718794922920c61cf6db221fb, type: 3}
   m_Name: Bow
   m_EditorClassIdentifier: 
+  multiplier: 1
   baseDamage: 10
-  attackSpeed: 1
   arrowCount: 1
   burnDuration: 0
   bounceCount: 0
-  multiplier: 1

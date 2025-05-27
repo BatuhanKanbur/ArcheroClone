@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillID: 0
   skillName: Burn
-  skillDuration: 100
+  skillDuration: 50
   statsModifiers:
   - {fileID: 11400000, guid: 46a4f8de51b69564695ef8a3741b8acd, type: 2}
+  skillIcon:
+    m_AssetGUID: 31d66e1003d5f9c4baeda62680856987
+    m_SubObjectName: Burn_Icon
+    m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_EditorAssetChanged: 1

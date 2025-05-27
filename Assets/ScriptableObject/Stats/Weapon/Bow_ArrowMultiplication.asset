@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bow_ArrowMultiplication
   m_EditorClassIdentifier: 
   multiplier: 0
-  baseDamage: 10
+  baseDamage: 0
   arrowCount: 2
   burnDuration: 0
   bounceCount: 0
