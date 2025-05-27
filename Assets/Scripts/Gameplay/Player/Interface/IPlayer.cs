@@ -8,7 +8,7 @@ namespace Gameplay.Player.Interface
     {
         public void Initialize(ITargetManager targetManager);
         public ICharacter Character { get; }
-        public void OnMove(InputValue input);
+        public void OnMove(InputAction.CallbackContext input);
         public Transform Transform { get; }
     }
 }

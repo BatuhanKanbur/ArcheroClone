@@ -18,7 +18,7 @@ namespace Gameplay.Character.Behaviour
         }
         public void Update()
         {
-            if(Character.Status.IsStunned || Character.Combat.IsAttacking)return;
+            if(Character.Status.IsStunned)return;
             Character.Animation.SetMovementInput(_moveInput.magnitude);
             if(!HasMoving) return;
             Character.Animation.SetMovementSpeed(_moveInput.magnitude * Character.Status.Stats.MovementSpeed);

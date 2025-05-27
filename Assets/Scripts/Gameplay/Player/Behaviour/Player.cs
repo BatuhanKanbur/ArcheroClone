@@ -11,6 +11,7 @@ namespace Gameplay.Player.Behaviour
     using Gameplay.Character.Behaviour;
     public class Player : Character, IPlayer, IDamageable
     {
+        [SerializeField] private InputActionReference moveAction;
         private Camera _mainCamera;
         public Transform Transform => transform;
         public ICharacter Character => this;
@@ -19,11 +20,14 @@ namespace Gameplay.Player.Behaviour
         {
             _mainCamera = Camera.main;
             TargetManager = targetManager;
+            moveAction.action.Enable();
+            moveAction.action.performed += OnMove;
+            moveAction.action.canceled += OnMove;
             base.Initialize();
         }
-        public void OnMove(InputValue input)
+        public void OnMove(InputAction.CallbackContext context)
         {
-            Movement?.SetMovementInput(GetMovementDirection(input.Get<Vector2>()));
+            Movement?.SetMovementInput(GetMovementDirection(context.ReadValue<Vector2>()));
         }
         private Vector3 GetMovementDirection(Vector2 moveInput)
         {

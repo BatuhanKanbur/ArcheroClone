@@ -1169,11 +1169,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementRange: 200
   m_DynamicOriginRange: 100
-  m_ControlPath: <Gamepad>/leftStick
+  m_ControlPath: <Joystick>/stick
   m_Behaviour: 0
   m_UseIsolatedInputActions: 0
   m_PointerDownAction:
-    m_Name: 
+    m_Name: Pointer Down
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: 942686e4-7735-417c-b92a-f9ee1c70d950
@@ -1182,7 +1182,7 @@ MonoBehaviour:
     m_SingletonActionBindings: []
     m_Flags: 0
   m_PointerMoveAction:
-    m_Name: 
+    m_Name: Pointer Move
     m_Type: 0
     m_ExpectedControlType: 
     m_Id: fae40c1f-d512-4352-aa90-7bc82609eba7
@@ -1427,7 +1427,7 @@ PrefabInstance:
     - target: {fileID: 3557075254135731814, guid: 1c978f09c4570c6458dd9c7616f5c18f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -22
+      value: -21.85
       objectReference: {fileID: 0}
     - target: {fileID: 3557075254135731814, guid: 1c978f09c4570c6458dd9c7616f5c18f,
         type: 3}
