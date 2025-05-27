@@ -17,7 +17,7 @@ namespace Gameplay.Character.Behaviour
             _aimConstraint = GetComponent<AimConstraint>();
             _activeWeight = _aimConstraint.weight;
             _aimConstraint.weight = 0f;
-            _aimConstraint.constraintActive = true;
+            _aimConstraint.constraintActive = false;
         }
 
         public void SetActive(bool active)
