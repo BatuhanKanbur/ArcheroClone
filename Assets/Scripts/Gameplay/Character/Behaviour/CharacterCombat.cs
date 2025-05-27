@@ -15,6 +15,7 @@ namespace Gameplay.Character.Behaviour
     {
         public ICharacter Character { get; }
         public IWeapon Weapon { get; private set; }
+        public bool IsAttacking { get; private set; }
         private bool HasMoving => Character.Movement.HasMoving;
         private bool HasStunned => Character.Status.IsStunned;
         private float _attackTime;
@@ -33,6 +34,7 @@ namespace Gameplay.Character.Behaviour
             if(HasMoving || HasStunned) return;
             _attackTime += Time.deltaTime * Character.Status.Stats.AttackSpeed;
             if (!(_attackTime >= 5)) return;
+            IsAttacking = true;
             _attackTime = 0;
             Attack();
         }
@@ -70,6 +72,7 @@ namespace Gameplay.Character.Behaviour
                     _currentClipHash = 0;
                     Character.Animation.SetAimConstraintsActive(false);
                     Weapon?.AttackEnd();
+                    IsAttacking = false;
                     break;
             }
         }

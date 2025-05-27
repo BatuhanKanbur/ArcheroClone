@@ -53,7 +53,7 @@ namespace Gamecore.MobManager.Behaviours
             if (!_mobs.Contains(mob)) return;
             _mobs.Remove(mob);
         }
-        public Vector3[] GetClosetMobPositions(Transform originTransform, int targetCount,float range)
+        public Vector3[] GetClosetTargetPositions(Transform originTransform, int targetCount,float range)
         {
             var positions = new List<Vector3>();
             var visitedMobs = new HashSet<IMob>();

@@ -1,6 +1,9 @@
 ﻿using System;
+using Cysharp.Threading.Tasks;
 using Gamecore.MobManager.Interface;
 using Gameplay.Character.Interface;
+using Gameplay.Damageable.Interface;
+using Gameplay.Damageable.Structure;
 using Gameplay.Player.Interface;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -8,7 +11,7 @@ using UnityEngine.InputSystem;
 namespace Gameplay.Player.Behaviour
 {
     using Gameplay.Character.Behaviour;
-    public class Player : Character, IPlayer
+    public class Player : Character, IPlayer, IDamageable
     {
         private Camera _mainCamera;
         public Transform Transform => transform;
@@ -34,6 +37,16 @@ namespace Gameplay.Player.Behaviour
             camRight.Normalize();
             var desiredMove = camForward * moveInput.y + camRight * moveInput.x;
             return desiredMove;
+        }
+
+        public void TakeDamage(DamageStats damageStats)
+        {
+            Status.OnHit(damageStats.Damage);
+        }
+
+        public UniTaskVoid DamageOverTime(DamageStats damageStats, float duration)
+        {
+            return default;
         }
     }
 }
