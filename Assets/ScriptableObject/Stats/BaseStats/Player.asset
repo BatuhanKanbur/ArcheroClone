@@ -17,3 +17,4 @@ MonoBehaviour:
   movementSpeed: 5
   rotationSpeed: 1000
   attackSpeed: 1
+  attackRange: 500

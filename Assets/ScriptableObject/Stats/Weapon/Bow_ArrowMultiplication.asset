@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 0
   baseDamage: 0
-  arrowCount: 2
+  arrowCount: 1
   burnDuration: 0
   bounceCount: 0

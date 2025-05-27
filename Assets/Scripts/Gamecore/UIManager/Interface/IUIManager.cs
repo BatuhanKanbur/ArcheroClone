@@ -9,9 +9,8 @@ namespace Gamecore.UIManager.Interface
         public Text ScoreText { get; }
         public void UpdateScore(int score)
         {
-            Debug.Log(score);
             if (ScoreText)
-                ScoreText.text = $"Score: {score}";
+                ScoreText.text = $"SCORE : {score}";
         }
     }
 }

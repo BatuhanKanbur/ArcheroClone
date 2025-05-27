@@ -18,6 +18,10 @@ namespace Gameplay.Damageable.Behaviour
             if(Camera.main)
                 healthBarPrefab.transform.forward = Camera.main.transform.forward;
         }
+        public void SetActive(bool active)
+        {
+            healthBarPrefab.SetActive(active);
+        }
         public void SetHealth(float health, float maxHealth)
         {
             healthText.text = health.ToString(CultureInfo.InvariantCulture);
@@ -25,6 +29,7 @@ namespace Gameplay.Damageable.Behaviour
         }
         public void Reset()
         {
+            SetActive(true);
             healthBarImage.fillAmount = 1f;
             healthText.text = string.Empty;
         }

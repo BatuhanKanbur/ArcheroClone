@@ -38,6 +38,7 @@ namespace Gameplay.Character.Behaviour
         private void Attack()
         {
             _closetDamageables = Character.GetClosetTargetPositions(Weapon.WeaponStats.BounceCount);
+            if (_closetDamageables.Length == 0) return;
             Character.Animation.SetIKTargetPosition(_closetDamageables.First());
             Character.Animation.SetAttack();
         }

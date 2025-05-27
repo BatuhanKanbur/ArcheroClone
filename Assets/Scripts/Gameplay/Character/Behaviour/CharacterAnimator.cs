@@ -65,7 +65,7 @@ namespace Gameplay.Character.Behaviour
 
         public void SetHit() => Animator.SetTrigger(HitKey);
 
-        public void SetDie() => Animator.SetTrigger(DieKey);
+        public void SetDie() =>  Animator.SetTrigger(DieKey);
 
         public void Update()
         {

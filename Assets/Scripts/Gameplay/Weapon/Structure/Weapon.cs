@@ -49,9 +49,13 @@ namespace Gameplay.Weapon.Structure
         public async UniTaskVoid SpawnThrowable(Vector3[] closetDamageables)
         {
             if (!throwableObject.IsAssigned()) return;
-            var throwable = await ObjectManager.GetObject(throwableObject, GetSpawnPoint.position, GetSpawnPoint.rotation);
-            var throwableComponent = throwable.GetComponent<IThrowable>();
-            throwableComponent?.Init(WeaponStats,closetDamageables);
+            for (var i = 0; i < WeaponStats.ArrowCount; i++)
+            {
+                var throwable = await ObjectManager.GetObject(throwableObject, GetSpawnPoint.position, GetSpawnPoint.rotation);
+                var throwableComponent = throwable.GetComponent<IThrowable>();
+                throwableComponent?.Init(WeaponStats,closetDamageables);
+                await UniTask.Delay(200);
+            }
         }
         public void ApplySkill(StatsData[] skillStats)
         {

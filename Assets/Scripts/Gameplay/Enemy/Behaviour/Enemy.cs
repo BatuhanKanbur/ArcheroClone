@@ -18,10 +18,11 @@ namespace Gameplay.Enemy.Behaviour
         private MobStats _mobStats;
         public Transform Transform => transform;
         public int EarnedScore => _mobStats.EarnedScore;
-        private readonly CancellationTokenSource _cts = new();
+        private CancellationTokenSource _cts = new();
 
         public void Initialize(StatsData statsData,ITargetManager targetManager, Action<IMob> onDispose)
         {
+            _cts = new CancellationTokenSource();
             _mobStats = statsData as MobStats;
             TargetManager = targetManager;
             base.Initialize();
@@ -29,16 +30,20 @@ namespace Gameplay.Enemy.Behaviour
             Status.OnDeath += OnDeath;
             Status.SetStats(statsData as ICharacterStats);
         }
-        public new void Dispose()
+        private void OnDeath()
         {
-            base.Dispose();
+            _onMobDispose?.Invoke(this);
+            _cts?.Cancel();
             Status.OnDeath -= OnDeath;
             _onMobDispose = null;
-            _cts?.Cancel();
+            DisableMob().Forget();
+        }
+        private async UniTaskVoid DisableMob()
+        {
+            await UniTask.Delay(2500);
             gameObject.SetActive(false);
         }
 
-        private void OnDeath() => _onMobDispose?.Invoke(this);
         public void TakeDamage(DamageStats damageStats)
         {
             Status.OnHit(damageStats.Damage);

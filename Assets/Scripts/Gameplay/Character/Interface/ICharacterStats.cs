@@ -6,5 +6,6 @@
         public float MovementSpeed { get; }
         public float RotationSpeed { get; }
         public float AttackSpeed { get; }
+        public float AttackRange { get; }
     }
 }

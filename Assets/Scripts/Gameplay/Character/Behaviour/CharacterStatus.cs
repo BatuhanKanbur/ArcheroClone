@@ -1,9 +1,13 @@
 ﻿using System;
+using Gamecore.AnimatorBehaviour.Enums;
+using Gamecore.Character.Structure;
 using Gameplay.Character.Interface;
 using Gameplay.Character.Structure;
 using Gameplay.Damageable.Interface;
 using Gameplay.Skill.Structure;
+using UnityEngine;
 using static UnityEngine.Object;
+using EventType = Gamecore.AnimatorBehaviour.Enums.EventType;
 
 namespace Gameplay.Character.Behaviour
 {
@@ -15,6 +19,7 @@ namespace Gameplay.Character.Behaviour
         public IHealthBar HealthBar { get; }
         public ICharacterStats Stats => _characterStats;
         private CharacterStats _characterStats;
+        private int _clipHash;
         public CharacterStatus(ICharacter character, CharacterStats stats,IHealthBar healthBar)
         {
             Character = character;
@@ -23,14 +28,16 @@ namespace Gameplay.Character.Behaviour
             HealthBar = healthBar;
             HealthBar?.Init(_health);
         }
-
         public void OnHit(float damage)
         {
+            if (_health <= 0) return;
             _health -= damage;
             Character.Animation.SetHit();
             HealthBar?.SetHealth(_health, _characterStats.Health);
-            if(_health <= 0)
-                OnDeath?.Invoke();
+            if (!(_health <= 0)) return;
+            HealthBar?.SetActive(false);
+            OnDeath?.Invoke();
+            Character.Animation.SetDie();
         }
         public void SetStats(ICharacterStats stats)
         {
@@ -58,6 +65,9 @@ namespace Gameplay.Character.Behaviour
             _health = _characterStats.Health;
             HealthBar?.Reset();
         }
-        public void Dispose() { }
+
+        public void Dispose()
+        {
+        }
     }
 }

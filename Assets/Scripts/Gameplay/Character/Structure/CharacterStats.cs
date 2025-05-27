@@ -11,10 +11,12 @@ namespace Gameplay.Character.Structure
         public float MovementSpeed => movementSpeed * multiplier;
         public float RotationSpeed => rotationSpeed * multiplier;
         public float AttackSpeed => attackSpeed * multiplier;
+        public float AttackRange => attackRange * multiplier;
         [SerializeField] private float maxHealth = 100f;
         [SerializeField] private float movementSpeed;
         [SerializeField] private float rotationSpeed;
         [SerializeField] private float attackSpeed;
+        [SerializeField] private float attackRange = 500f;
 
         public CharacterStats(float movementSpeed, float rotationSpeed, float attackSpeed) : base(1)
         {

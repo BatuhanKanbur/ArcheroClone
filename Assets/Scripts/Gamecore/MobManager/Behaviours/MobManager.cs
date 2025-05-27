@@ -46,7 +46,6 @@ namespace Gamecore.MobManager.Behaviours
         {
             _mobs.Remove(mobObject);
             _onMobDisposed?.Invoke(mobObject);
-            mobObject.Dispose();
         }
 
         public void RemoveMob(IMob mob)
@@ -54,14 +53,14 @@ namespace Gamecore.MobManager.Behaviours
             if (!_mobs.Contains(mob)) return;
             _mobs.Remove(mob);
         }
-        public Vector3[] GetClosetMobPositions(Transform originTransform, int targetCount)
+        public Vector3[] GetClosetMobPositions(Transform originTransform, int targetCount,float range)
         {
             var positions = new List<Vector3>();
             var visitedMobs = new HashSet<IMob>();
             var currentReferencePoint = originTransform.position;
             for (var i = 0; i <= targetCount; i++)
             {
-                var closestMob = FindClosestMob(currentReferencePoint, visitedMobs);
+                var closestMob = FindClosestMob(currentReferencePoint,range, visitedMobs);
                 if (closestMob == null)
                     break;
                 visitedMobs.Add(closestMob);
@@ -72,7 +71,7 @@ namespace Gamecore.MobManager.Behaviours
             }
             return positions.ToArray();
         }
-        private IMob FindClosestMob(Vector3 referencePoint, HashSet<IMob> excludedMobs)
+        private IMob FindClosestMob(Vector3 referencePoint,float range, HashSet<IMob> excludedMobs)
         {
             IMob closest = null;
             var minDistance = Mathf.Infinity;
@@ -80,6 +79,7 @@ namespace Gamecore.MobManager.Behaviours
             {
                 if (excludedMobs.Contains(mob)) continue;
                 var distance = Vector3.Distance(referencePoint, mob.Transform.position);
+                if (distance > range) continue;
                 if (!(distance < minDistance)) continue;
                 minDistance = distance;
                 closest = mob;
