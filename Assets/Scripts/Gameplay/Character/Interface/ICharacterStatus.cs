@@ -6,6 +6,7 @@ namespace Gameplay.Character.Interface
 {
     public interface ICharacterStatus : ICharacterComponent , ISkillable
     {
+        public bool IsStunned { get; }
         public Action OnDeath { get; set; }
         public ICharacterStats Stats { get; }
         public IHealthBar HealthBar { get; }

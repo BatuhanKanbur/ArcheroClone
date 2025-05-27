@@ -16,6 +16,7 @@ namespace Gameplay.Character.Behaviour
         public ICharacter Character { get; }
         public IWeapon Weapon { get; private set; }
         private bool HasMoving => Character.Movement.HasMoving;
+        private bool HasStunned => Character.Status.IsStunned;
         private float _attackTime;
         private int _currentClipHash;
         private Vector3[] _closetDamageables;
@@ -29,7 +30,7 @@ namespace Gameplay.Character.Behaviour
         }
         public void Update()
         {
-            if(HasMoving) return;
+            if(HasMoving || HasStunned) return;
             _attackTime += Time.deltaTime * Character.Status.Stats.AttackSpeed;
             if (!(_attackTime >= 5)) return;
             _attackTime = 0;
