@@ -1,4 +1,14 @@
-# Archero-Clone Demo (Unity)
+# Archero-Clone Demo
+<div align="center">
+  <a href="https://batuhankanbur.itch.io/archero-clone" target="_blank">
+	<img src="https://s14.gifyu.com/images/bxxiN.gif" alt="Game Preview" width="640">
+  </a>
+</div>
+<p align="center">
+  <a href="https://batuhankanbur.itch.io/archero-clone" target="_blank">
+    <img src="https://s6.gifyu.com/images/bzzlE.png" alt="Play Button" width="150">
+  </a>
+</p>
 
 A simple prototype replicating **Archero-style control and combat mechanics** using Unity. This project demonstrates modular design, physics-based projectile motion, and an extendable skill system with scalable architecture.
 
