@@ -20,7 +20,7 @@ namespace Gameplay.Character.Behaviour
         private bool HasStunned => Character.Status.IsStunned;
         private float _attackTime;
         private int _currentClipHash;
-        private Vector3[] _closetDamageables;
+        private Transform[] _closetDamageables;
         public CharacterCombat(ICharacter character,Weapon weapon)
         {
             Character = character;
@@ -42,7 +42,7 @@ namespace Gameplay.Character.Behaviour
         {
             _closetDamageables = Character.GetClosetTargetPositions(Weapon.WeaponStats.BounceCount);
             if (_closetDamageables.Length == 0) return;
-            Character.Animation.SetIKTargetPosition(_closetDamageables.First());
+            Character.Animation.SetIKTargetPosition(_closetDamageables.First().position);
             Character.Animation.SetAttack();
         }
         private void OnAttackStartEvent(AnimatorEvent animationEvent)

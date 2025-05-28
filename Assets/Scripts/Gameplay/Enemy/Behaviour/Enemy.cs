@@ -21,11 +21,11 @@ namespace Gameplay.Enemy.Behaviour
         private Action<IMob> _onMobDispose;
         private MobStats _mobStats;
         [SerializeField] private NavMeshAgent navMeshAgent;
-        public Transform Transform => transform;
+        public Transform Transform => Animation.Spine;
         public int EarnedScore => _mobStats.EarnedScore;
         private CancellationTokenSource _cts = new();
         private Vector3 _currentInput;
-        private Vector3 TargetPosition => TargetManager.GetClosetTargetPositions(transform,1,500)[0];
+        private Vector3 TargetPosition => TargetManager.GetClosetTargetPositions(transform,1,500)[0].position;
         private bool TargetIsInRange()
         {
             var targetPosition = TargetPosition;
@@ -46,24 +46,26 @@ namespace Gameplay.Enemy.Behaviour
             Status.SetStats(statsData as ICharacterStats);
             if (_mobStats?.mobType != MobType.Attacker) return;
             AlignToNearestNavMesh();
+            navMeshAgent.enabled = true;
             navMeshAgent.stoppingDistance = _mobStats.AttackRange;
             navMeshAgent.updatePosition = false;
             navMeshAgent.updateRotation = false;
         }
         private void AlignToNearestNavMesh()
         {
-            if (NavMesh.SamplePosition(transform.position, out var hit, 10, NavMesh.AllAreas))
-                navMeshAgent.Warp(hit.position);
+            if (NavMesh.SamplePosition(transform.position, out var hit, 1f, NavMesh.AllAreas)) 
+                transform.position = hit.position;
         }
         private void FixedUpdate()
         {
             if(_mobStats.mobType != MobType.Attacker) return;
-            _currentInput = Vector3.Lerp(_currentInput,TargetIsInRange() ? Vector3.zero : GetMovementDirection(),Time.deltaTime);
+            _currentInput = Vector3.Lerp(_currentInput,TargetIsInRange() ? Vector3.zero : GetMovementDirection(),Time.deltaTime * 3f);
             Move(_currentInput);
         }
 
         private Vector3 GetMovementDirection()
         {
+            if(Status.IsDead) return Vector3.zero;
             navMeshAgent.SetDestination(TargetPosition);
             var nextPos = navMeshAgent.steeringTarget;
             var toTarget = (nextPos - transform.position).normalized;
@@ -88,6 +90,7 @@ namespace Gameplay.Enemy.Behaviour
         private async UniTaskVoid DisableMob()
         {
             await UniTask.Delay(2500);
+            navMeshAgent.enabled = true;
             gameObject.SetActive(false);
         }
         public void TakeDamage(DamageStats damageStats)

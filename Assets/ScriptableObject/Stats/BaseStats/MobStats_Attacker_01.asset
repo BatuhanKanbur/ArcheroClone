@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 1
   maxHealth: 100
-  movementSpeed: 4
+  movementSpeed: 5
   rotationSpeed: 500
-  attackSpeed: 0.5
-  attackRange: 5
-  earnedScore: 1500
+  attackSpeed: 0.25
+  attackRange: 10
+  earnedScore: 100
   mobType: 1

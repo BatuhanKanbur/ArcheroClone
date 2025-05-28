@@ -20,3 +20,5 @@ MonoBehaviour:
     m_EditorAssetChanged: 0
   mobStats:
   - {fileID: 11400000, guid: fbca58e02ec580f4dbe92fc778cd8006, type: 2}
+  - {fileID: 11400000, guid: 5a4fe9bf83675c1478fdacd77e44a9ed, type: 2}
+  - {fileID: 11400000, guid: 797f7378b7f07834cacd68c80ad96d70, type: 2}

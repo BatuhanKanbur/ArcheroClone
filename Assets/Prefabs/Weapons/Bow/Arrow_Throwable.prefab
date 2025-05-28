@@ -24528,10 +24528,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075f3fbfc6e04518bc27284786ebb22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throwForce: 1
-  throwAngle: 45
   rb: {fileID: 1924212678726825293}
   fireEffect: {fileID: 1883389074652432040}
+  throwForce: 15
 --- !u!65 &3073190987002064346
 BoxCollider:
   m_ObjectHideFlags: 0

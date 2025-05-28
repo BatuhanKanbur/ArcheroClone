@@ -9,12 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 318a14b290f3472f9252ba5dd453c9a1, type: 3}
-  m_Name: Player
+  m_Script: {fileID: 11500000, guid: 7712a2d3820742c5b4e3ed7b48875d85, type: 3}
+  m_Name: MobStats_Attacker_03
   m_EditorClassIdentifier: 
   multiplier: 1
-  maxHealth: 1000
-  movementSpeed: 6
-  rotationSpeed: 1000
-  attackSpeed: 2
-  attackRange: 500
+  maxHealth: 100
+  movementSpeed: 3
+  rotationSpeed: 500
+  attackSpeed: 0.75
+  attackRange: 7
+  earnedScore: 100
+  mobType: 1

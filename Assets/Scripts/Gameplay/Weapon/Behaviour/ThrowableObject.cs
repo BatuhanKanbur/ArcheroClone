@@ -8,16 +8,14 @@ namespace Gameplay.Weapon.Behaviour
     public class ThrowableObject : MonoBehaviour, IThrowable
     {
         public IWeaponStats WeaponStats { get; set; }
-        [Range(0,1.25f)]
-        [SerializeField] private float throwForce = 1f;
-        [Range(0,45)]
-        [SerializeField] private float throwAngle = 45f;
         [SerializeField] private Rigidbody rb;
         [SerializeField] private GameObject fireEffect;
+        [SerializeField] private float throwForce = 5f;
+
         private int _bounceCount;
         private int _currentTargetIndex;
-        private Vector3[] _targetPositions;
-        public void Init(IWeaponStats weapon,Vector3[] targetPositions)
+        private Transform[] _targetPositions;
+        public void Init(IWeaponStats weapon,Transform[] targetPositions)
         {
             _bounceCount = 0;
             _currentTargetIndex = 0;
@@ -46,9 +44,9 @@ namespace Gameplay.Weapon.Behaviour
                 gameObject.SetActive(false);
             }
         }
-        private void LaunchToTarget(Vector3 target)
+        private void LaunchToTarget(Transform target)
         {
-            var velocity = CalculateBallisticVelocity(target);
+            var velocity = CalculateBallisticVelocity(target.position);
             if (velocity == Vector3.zero) return;
             rb.Sleep();
             rb.drag = 0;
@@ -63,18 +61,30 @@ namespace Gameplay.Weapon.Behaviour
                 transform.rotation = Quaternion.LookRotation(rb.velocity.normalized);
         }
 
-        private Vector3 CalculateBallisticVelocity(Vector3 target)
+        private Vector3 CalculateBallisticVelocity(Vector3 targetPosition)
         {
-            var dir = target - transform.position;
-            var h = dir.y;
-            dir.y = 0;
-            var distance = dir.magnitude;
-            var a = (throwAngle/throwForce) * Mathf.Deg2Rad;
-            dir.y = distance * Mathf.Tan(a);
-            distance += h / Mathf.Tan(a);
-            var gravity = Mathf.Abs(Physics.gravity.y);
-            var velocityMagnitude = Mathf.Sqrt(distance * gravity / Mathf.Sin(2 * a));
-            return (velocityMagnitude * dir.normalized) * throwForce;
+            var dir = targetPosition - transform.position;
+            var dirXZ = new Vector3(dir.x, 0, dir.z);
+            var x = dirXZ.magnitude;
+            var y = dir.y;
+            var g = Mathf.Abs(Physics.gravity.y);
+            var speed = throwForce;
+            var finalSpeed = speed;
+            while (finalSpeed <= 300)
+            {
+                var s2 = finalSpeed * finalSpeed;
+                var disc = s2 * s2 - g * (g * x * x + 2 * y * s2);
+                if (disc >= 0f)
+                {
+                    var sqrtDisc = Mathf.Sqrt(disc);
+                    var angle = Mathf.Atan((s2 - sqrtDisc) / (g * x));
+                    var velocity = dirXZ.normalized * finalSpeed * Mathf.Cos(angle);
+                    velocity.y = finalSpeed * Mathf.Sin(angle);
+                    return velocity;
+                }
+                finalSpeed += 0.5f;
+            }
+            return (dir.normalized * finalSpeed);
         }
     }
 }

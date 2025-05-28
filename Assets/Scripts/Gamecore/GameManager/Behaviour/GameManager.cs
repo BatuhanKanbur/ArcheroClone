@@ -53,11 +53,9 @@ namespace Gamecore.GameManager.Behaviour
             _player = createdPlayer.GetComponent<IPlayer>();
             _player.Initialize(targetManager:mobManager);
         }
-        public Vector3[] GetClosetTargetPositions(Transform originTransform, int targetCount, float range)
+        public Transform[] GetClosetTargetPositions(Transform originTransform, int targetCount, float range)
         {
-            var playerPosition = _player.Transform.position;
-            playerPosition.y += 1.5f;
-            return new[] {playerPosition};
+            return new[] {_player.Transform};
         }
       
     }

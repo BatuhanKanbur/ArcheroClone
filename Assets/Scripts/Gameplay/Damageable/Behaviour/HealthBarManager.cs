@@ -21,7 +21,6 @@ namespace Gameplay.Damageable.Behaviour
 
         private void Update()
         {
-            if(Time.frameCount % 30 != 0) return;
             if(!_cameraTransform) return;
             healthBarPrefab.transform.forward = _cameraTransform.transform.forward;
         }

@@ -36,7 +36,7 @@ namespace Gameplay.Weapon.Structure
                 RightHandObject?.SetParent(rightHand);
             }
         }
-        public void Attack(Vector3[] closetDamageables)
+        public void Attack(Transform[] closetDamageables)
         {
             RightHandObject?.SetActive(false);
             SpawnThrowable(closetDamageables).Forget();
@@ -45,7 +45,7 @@ namespace Gameplay.Weapon.Structure
         {
             RightHandObject?.SetActive(true);
         }
-        public async UniTaskVoid SpawnThrowable(Vector3[] closetDamageables)
+        public async UniTaskVoid SpawnThrowable(Transform[] closetDamageables)
         {
             if (!throwableObject.IsAssigned()) return;
             for (var i = 0; i < WeaponStats.ArrowCount; i++)

@@ -53,7 +53,7 @@ namespace Gameplay.Character.Behaviour
         }
         public void OnDestroy() => Dispose();
         public void Move(Vector3 input) =>  Movement?.SetMovementInput(input);
-        public Vector3[] GetClosetTargetPositions(int targetCount)
+        public Transform[] GetClosetTargetPositions(int targetCount)
         {
             return TargetManager?.GetClosetTargetPositions(transform, targetCount, characterStats.AttackRange);
         }

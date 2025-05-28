@@ -14,7 +14,8 @@ namespace Gameplay.Character.Behaviour
     {
         private float _health;
         public Action OnDeath { get; set; }
-        public bool IsStunned { get; set; }
+        public bool IsStunned { get; private set; }
+        public bool IsDead => _health <= 0;
         public ICharacter Character { get; }
         public IHealthBar HealthBar { get; }
         public ICharacterStats Stats => _characterStats;

@@ -14,6 +14,7 @@ namespace Gameplay.Character.Behaviour
         public Animator Animator { get; }
         public Transform LeftHand { get; }
         public Transform RightHand { get; }
+        public Transform Spine { get; }
         public Transform IKTarget { get; private set; }
         private readonly CharacterAimController[] _aimConstraints;
         private readonly StateMachineBehaviour[] _stateMachineBehaviours;
@@ -23,6 +24,7 @@ namespace Gameplay.Character.Behaviour
             Animator = Character.Animator;
             LeftHand = Animator.GetBoneTransform(HumanBodyBones.LeftHand);
             RightHand = Animator.GetBoneTransform(HumanBodyBones.RightHand);
+            Spine = Animator.GetBoneTransform(HumanBodyBones.Spine);
             IKTarget = ikTarget;
             _aimConstraints = Animator.GetComponentsInChildren<CharacterAimController>();
             _stateMachineBehaviours = Animator.GetBehaviours<StateMachineBehaviour>();

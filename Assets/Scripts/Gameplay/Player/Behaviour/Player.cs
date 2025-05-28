@@ -13,7 +13,7 @@ namespace Gameplay.Player.Behaviour
     {
         [SerializeField] private InputActionReference moveAction;
         private Camera _mainCamera;
-        public Transform Transform => transform;
+        public Transform Transform => Animation.Spine;
         public ICharacter Character => this;
 
         public void Initialize(ITargetManager targetManager)
@@ -39,6 +39,11 @@ namespace Gameplay.Player.Behaviour
             camRight.Normalize();
             var desiredMove = camForward * moveInput.y + camRight * moveInput.x;
             return desiredMove;
+        }
+        private new void OnDestroy()
+        {
+            moveAction.action.performed -= OnMove;
+            moveAction.action.canceled -= OnMove;
         }
 
         public void TakeDamage(DamageStats damageStats)
