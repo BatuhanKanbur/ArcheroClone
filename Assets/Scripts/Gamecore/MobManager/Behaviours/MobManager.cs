@@ -52,9 +52,9 @@ namespace Gamecore.MobManager.Behaviours
             if (!_mobs.Contains(mob)) return;
             _mobs.Remove(mob);
         }
-        public Vector3[] GetClosetTargetPositions(Transform originTransform, int targetCount,float range)
+        public Transform[] GetClosetTargetPositions(Transform originTransform, int targetCount,float range)
         {
-            var positions = new List<Vector3>();
+            var positions = new List<Transform>();
             var visitedMobs = new HashSet<IMob>();
             var currentReferencePoint = originTransform.position;
             for (var i = 0; i <= targetCount; i++)
@@ -64,8 +64,7 @@ namespace Gamecore.MobManager.Behaviours
                     break;
                 visitedMobs.Add(closestMob);
                 var mobPosition = closestMob.Transform.position;
-                mobPosition.y+=1.5f;
-                positions.Add(mobPosition);
+                positions.Add(closestMob.Transform);
                 currentReferencePoint = mobPosition;
             }
             return positions.ToArray();
