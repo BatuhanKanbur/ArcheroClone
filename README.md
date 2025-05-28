@@ -1,7 +1,7 @@
 # Archero-Clone Demo
 <div align="center">
   <a href="https://batuhankanbur.itch.io/archero-clone" target="_blank">
-	<img src="https://s14.gifyu.com/images/bxxiN.gif" alt="Game Preview" width="640">
+	<img src="https://s14.gifyu.com/images/bxxiB.gif" alt="Game Preview" width="640">
   </a>
 </div>
 <p align="center">
