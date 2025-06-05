@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Leve_01
   m_EditorClassIdentifier: 
   maxMobCount: 5
+  nonRendedSpawn: 1
   horizontalLimits: {x: -10, y: 10}
   verticalLimits: {x: -8, y: 24}
   mobs:
-  - {fileID: 11400000, guid: 59b76fd2e4d83014c9023ebe81d0dd83, type: 2}
+  - {fileID: 11400000, guid: 924fb522accd7f34aabba762bc57c149, type: 2}

@@ -82,6 +82,7 @@ namespace Gameplay.Character.Behaviour
         {
             Character.Animation.Unsubscribe(AnimationType.AttackStart, OnAttackStartEvent);
             Character.Animation.Unsubscribe(AnimationType.AttackEnd, OnAttackEndEvent);
+            _attackTime = -1000;
         }
     }
 }

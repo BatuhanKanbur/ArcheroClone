@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   multiplier: 1
-  maxHealth: 1000
+  maxHealth: 500
   movementSpeed: 6
   rotationSpeed: 1000
   attackSpeed: 2

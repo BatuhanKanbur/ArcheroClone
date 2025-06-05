@@ -17,6 +17,6 @@ MonoBehaviour:
   movementSpeed: 5
   rotationSpeed: 500
   attackSpeed: 0.4
-  attackRange: 7
-  earnedScore: 100
+  attackRange: 6
+  earnedScore: 1
   mobType: 1

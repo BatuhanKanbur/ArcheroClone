@@ -14,7 +14,7 @@ namespace Gameplay.Character.Interface
         public Transform IKTarget { get; }
         public void Subscribe(AnimationType animationType,Action<AnimatorEvent> callback);
         public void Unsubscribe(AnimationType animationType,Action<AnimatorEvent> callback);
-        public void SetAimConstraintsActive(bool active);
+        public void SetAimConstraintsActive(bool active,bool isLerp=true);
         public void SetIKTargetPosition(Vector3 position);
         public void SetMovementSpeed(float speed);
         public void SetMovementInput(float input);

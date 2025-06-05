@@ -33,8 +33,13 @@ namespace Gameplay.Character.Behaviour
             var finalMovement = (horizontalMovement + _velocity) * Time.deltaTime;
             _controller.Move(finalMovement);
         }
-        public void SetMovementInput(Vector3 input) => _moveInput = input;
-       
+        public void SetMovementInput(Vector3 input)
+        {
+            if(_moveInput.Equals(Vector3.zero) && !input.Equals(_moveInput))
+                Character.Animation.SetAimConstraintsActive(false,false);
+            _moveInput = input;
+        }
+
         public void Reset()
         {
         }

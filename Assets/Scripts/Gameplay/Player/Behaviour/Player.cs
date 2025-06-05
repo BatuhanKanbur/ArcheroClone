@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System;
+using Cysharp.Threading.Tasks;
 using Gameplay.Character.Interface;
 using Gameplay.Damageable.Interface;
 using Gameplay.Damageable.Structure;
@@ -9,21 +10,23 @@ using UnityEngine.InputSystem;
 namespace Gameplay.Player.Behaviour
 {
     using Gameplay.Character.Behaviour;
-    public class Player : Character, IPlayer, IDamageable
+    public class Player : Character, IPlayer, IDamageable, InputSystem.IPlayerActions
     {
-        [SerializeField] private InputActionReference moveAction;
+        private InputSystem _inputSystem;
         private Camera _mainCamera;
         public Transform Transform => Animation.Spine;
         public ICharacter Character => this;
-
-        public void Initialize(ITargetManager targetManager)
+        private Action _onDeath;
+        public void Initialize(ITargetManager targetManager, Action onDeath)
         {
             _mainCamera = Camera.main;
             TargetManager = targetManager;
-            moveAction.action.Enable();
-            moveAction.action.performed += OnMove;
-            moveAction.action.canceled += OnMove;
+            _inputSystem = new InputSystem();
+            _inputSystem.Player.SetCallbacks(this);
+            _inputSystem.Player.Enable();
             base.Initialize();
+            _onDeath = onDeath;
+            Status.OnDeath += OnDeath;
         }
         public void OnMove(InputAction.CallbackContext context)
         {
@@ -40,17 +43,24 @@ namespace Gameplay.Player.Behaviour
             var desiredMove = camForward * moveInput.y + camRight * moveInput.x;
             return desiredMove;
         }
-        private new void OnDestroy()
-        {
-            moveAction.action.performed -= OnMove;
-            moveAction.action.canceled -= OnMove;
-        }
 
+        public void OnDeath()
+        {
+            _onDeath?.Invoke();
+            Dispose();
+        }
+        protected override void OnDestroy()
+        {
+            Status.OnDeath -= OnDeath;
+            _inputSystem.Player.Disable();
+            _inputSystem.Player.SetCallbacks(null);
+            _inputSystem.Dispose();
+            base.OnDestroy();
+        }
         public void TakeDamage(DamageStats damageStats)
         {
             Status.OnHit(damageStats.Damage);
         }
-
         public UniTaskVoid DamageOverTime(DamageStats damageStats, float duration)
         {
             return default;

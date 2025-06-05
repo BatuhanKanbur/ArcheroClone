@@ -12,12 +12,14 @@ namespace Gamecore.MobManager.Behaviours
     public class MobManager : MonoBehaviour, IMobManager, ITargetManager
     {
         [SerializeField] private MobSet mobArea;
+        public Transform GetTargetTransform => transform;
         private readonly List<IMob> _mobs = new();
         private readonly CancellationTokenSource _cts = new();
         private MobSpawner _mobSpawner;
         private bool _firstSpawned;
         private ITargetManager _targetManager;
         private Action<IMob> _onMobDisposed;
+        private int _disposedCount;
         public async UniTask SpawnMobs(ITargetManager targetManager, Action<IMob> onMobDisposed)
         {
             _targetManager = targetManager;
@@ -29,9 +31,10 @@ namespace Gamecore.MobManager.Behaviours
                     await UniTask.Delay(1000, cancellationToken: _cts.Token);
                 else
                     await UniTask.Yield(cancellationToken: _cts.Token);
-                var targetMobCount = mobArea.maxMobCount - _mobs.Count;
+                var targetMobCount = (mobArea.maxMobCount + _disposedCount) - _mobs.Count;
                 if (targetMobCount <= 0 || mobArea.mobs.Length <= 0) continue;
-                var spawnedMobs = await _mobSpawner.SpawnMobsAsync(targetMobCount,mobArea);
+                var spawnOrigin = _targetManager.GetTargetTransform.position;
+                var spawnedMobs = await _mobSpawner.SpawnMobsAsync(targetMobCount,mobArea,spawnOrigin);
                 foreach (var spawnedMob in spawnedMobs)
                 {
                     spawnedMob.Mob.Initialize(spawnedMob.Stats,_targetManager,OnMobDispose);
@@ -43,6 +46,7 @@ namespace Gamecore.MobManager.Behaviours
 
         private void OnMobDispose(IMob mobObject)
         {
+            _disposedCount++;
             _mobs.Remove(mobObject);
             _onMobDisposed?.Invoke(mobObject);
         }

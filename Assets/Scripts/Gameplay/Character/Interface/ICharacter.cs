@@ -18,8 +18,6 @@ namespace Gameplay.Character.Interface
         public ITargetManager TargetManager { get; set; }
         public Transform[] GetClosetTargetPositions(int targetCount);
         public void Initialize();
-        public void OnEnable();
-        public void OnDestroy();
         public void Move(Vector3 input);
     }
 }

@@ -43,10 +43,10 @@ namespace Gameplay.Character.Behaviour
                     if( playerAnimationState.animationType == animationType)
                         playerAnimationState.RemoveListener(callback);
         }
-        public void SetAimConstraintsActive(bool active)
+        public void SetAimConstraintsActive(bool active,bool isLerp=true)
         {
             foreach (var aimConstraint in _aimConstraints)
-                aimConstraint.SetActive(active);
+                aimConstraint.SetActive(active, isLerp ? 0.5f : 0f);
         }
         public void SetIKTargetPosition(Vector3 position)
         {
@@ -54,9 +54,7 @@ namespace Gameplay.Character.Behaviour
             IKTarget.position = position;
         }
         public void SetMovementInput(float input) => Animator.SetFloat(MovementInputKey, input);
-        
         public void SetMovementSpeed(float speed) => Animator.SetFloat(MovementSpeedKey, speed);
-
         public void SetAttack()
         {
             Animator.SetFloat(AttackSpeedKey, Character.Status.Stats.AttackSpeed);

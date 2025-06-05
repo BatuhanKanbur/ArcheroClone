@@ -12,5 +12,6 @@ namespace Gamecore.UIManager.Interface
             if (ScoreText)
                 ScoreText.text = $"SCORE : {score}";
         }
+        public void ShowEndGamePanel(float score);
     }
 }

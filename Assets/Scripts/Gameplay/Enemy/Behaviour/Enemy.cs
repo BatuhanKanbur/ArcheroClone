@@ -53,7 +53,7 @@ namespace Gameplay.Enemy.Behaviour
         }
         private void AlignToNearestNavMesh()
         {
-            if (NavMesh.SamplePosition(transform.position, out var hit, 1f, NavMesh.AllAreas)) 
+            if (NavMesh.SamplePosition(transform.position, out var hit, 5f, NavMesh.AllAreas)) 
                 transform.position = hit.position;
         }
         private void FixedUpdate()

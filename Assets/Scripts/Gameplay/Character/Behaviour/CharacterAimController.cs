@@ -19,12 +19,12 @@ namespace Gameplay.Character.Behaviour
             _aimConstraint.constraintActive = false;
         }
 
-        public void SetActive(bool active)
+        public void SetActive(bool active,float duration)
         {
             _cts?.Cancel();
             _cts = new CancellationTokenSource();
             var targetWeight = active ? _activeWeight : 0f;
-            SmoothWeightChangeAsync(targetWeight, 0.5f, _cts.Token).Forget();
+            SmoothWeightChangeAsync(targetWeight, duration, _cts.Token).Forget();
         }
         private async UniTask SmoothWeightChangeAsync(float targetWeight, float duration, CancellationToken token)
         {

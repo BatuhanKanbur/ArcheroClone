@@ -36,7 +36,7 @@ namespace Gameplay.Character.Behaviour
             SkillController = new CharacterSkillController(this);
             IsInitialized = true;
         }
-        public void OnEnable()
+        protected virtual void OnEnable()
         {
             Status?.Reset();
             Movement?.Reset();
@@ -51,7 +51,7 @@ namespace Gameplay.Character.Behaviour
             Animation?.Update();
             SkillController?.Update();
         }
-        public void OnDestroy() => Dispose();
+        protected virtual void OnDestroy() => Dispose();
         public void Move(Vector3 input) =>  Movement?.SetMovementInput(input);
         public Transform[] GetClosetTargetPositions(int targetCount)
         {
